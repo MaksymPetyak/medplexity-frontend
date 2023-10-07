@@ -1,13 +1,13 @@
 import create from 'zustand';
 
 interface EvaluationState {
-  evaluationPath: string | null;
-  setEvaluationPath: (path: string | null) => void;
+  evaluationURL: string | null;
+  setEvaluationURL: (path: string | null) => void;
 }
 
 const useEvaluationStore = create<EvaluationState>((set) => ({
-  evaluationPath: null,
-  setEvaluationPath: (path: string | null) => set({ evaluationPath: path }),
+  evaluationURL: null,
+  setEvaluationURL: (path: string | null) => set({ evaluationURL: path }),
 }));
 
 export default useEvaluationStore;

@@ -44,16 +44,18 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
 }
 
 export function EvaluationViewer() {
-  const { evaluationPath } = useEvaluationStore();
+  const { evaluationURL } = useEvaluationStore();
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
-  const { data, error } = useSWR('medmcqa_gpt-4_evaluation.json', fetcher);
+  const { data, error } = useSWR(evaluationURL, fetcher);
+  console.log('data', data);
+  console.log('error', error);
 
   // TODO: styling
   if (error) return <div className={'text-red-500'}>Error loading data</div>;
   if (!data) return <div>Loading...</div>;
 
-  if (!evaluationPath) {
+  if (!evaluationURL) {
     return <p>No evaluation selected.</p>;
   }
 

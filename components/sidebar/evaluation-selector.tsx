@@ -10,7 +10,7 @@ import { ModelSelector } from '@/components/sidebar/model-selector';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 
 export function EvaluationSelector() {
-  const { setEvaluationPath } = useEvaluationStore();
+  const { setEvaluationURL } = useEvaluationStore();
 
   const evals = DATASETS;
 
@@ -30,13 +30,13 @@ export function EvaluationSelector() {
   const availableModels = Object.keys(selectedSplitData || {});
   const [selectedModel, setSelectedModel] = useState(availableModels[0]);
 
-  const evaluationPath = selectedSplitData
+  const evaluationURL = selectedSplitData
     ? selectedSplitData[selectedModel]
     : null;
 
   useEffect(() => {
-    setEvaluationPath(evaluationPath);
-  }, [evaluationPath, setEvaluationPath]);
+    setEvaluationURL(evaluationURL);
+  }, [evaluationURL, setEvaluationURL]);
 
   return (
     <div className={'flex flex-col gap-2 mt-2 w-full'}>
