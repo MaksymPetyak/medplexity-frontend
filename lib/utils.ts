@@ -23,4 +23,4 @@ export const toCamelCase = (obj: any): any => {
     );
   }
   return obj;
-}
+};

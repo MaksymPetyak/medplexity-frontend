@@ -16,4 +16,6 @@ export interface FailedEvaluation {
 export interface EvaluationSummary {
   evaluationResults: EvaluationResult[];
   failedEvaluations: FailedEvaluation[];
+  promptTemplate?: string;
+  date?: string;
 }

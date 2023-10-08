@@ -8,6 +8,7 @@ import { OutputCard } from '@/components/evaluation-viewer/output-card';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import useSWR from 'swr';
 import { toCamelCase } from '@/lib/utils';
+import { PromptCard } from '@/components/evaluation-viewer/prompt-card';
 
 interface EvaluationProps {
   evaluationSummary: EvaluationSummary;
@@ -22,6 +23,10 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
     return <p>No datapoints in the evaluation.</p>;
   }
 
+  // Prompt key is a special key that we display separately
+  // @ts-ignore
+  const { prompt, ...outputMetadata } = selectedDatapoint.outputMetadata;
+
   return (
     <div className={'flex flex-col gap-2'}>
       <DatapointSelector
@@ -33,11 +38,13 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
           inputs={selectedDatapoint.input}
           inputsMetadata={selectedDatapoint.inputMetadata}
         />
-
-        {/* TODO: create a separate field for the prompt <PromptCard prompt={"Test"} />*/}
+        <PromptCard
+          prompt={prompt}
+          promptTemplate={evaluationSummary.promptTemplate}
+        />
         <OutputCard
           outputs={selectedDatapoint.output}
-          outputsMetadata={selectedDatapoint.outputMetadata}
+          outputsMetadata={outputMetadata}
         />
       </div>
     </div>
@@ -50,7 +57,6 @@ export function EvaluationViewer() {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR(evaluationURL, fetcher);
 
-  // TODO: styling
   if (error) return <div className={'text-red-500'}>Error loading data</div>;
   if (!data) return <div>Loading...</div>;
 

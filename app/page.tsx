@@ -1,5 +1,4 @@
 import { EvaluationViewer } from '@/components/evaluation-viewer/evaluation-viewer';
-import { mockEvaluationSummary } from '@/lib/mocks/mockEvaluationSummary';
 import { Sidebar } from '@/components/sidebar/sidebar';
 
 export default function Home() {

@@ -25,7 +25,9 @@ export function CollapsableCard({
         {title}
       </CardHeader>
       {isOpen && (
-        <CardContent className={'p-4 text-sm'}>{children}</CardContent>
+        <CardContent className={'p-4 text-sm whitespace-pre-line'}>
+          {children}
+        </CardContent>
       )}
     </Card>
   );

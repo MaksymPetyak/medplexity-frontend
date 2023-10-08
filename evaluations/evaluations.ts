@@ -20,7 +20,7 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
     splits: {
       validation: {
         'gpt-4':
-          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/medmcqa_gpt-4_evaluation.json?raw=true',
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/medmcqa_validation(10)_gpt-4_10.json',
       },
     },
   },
