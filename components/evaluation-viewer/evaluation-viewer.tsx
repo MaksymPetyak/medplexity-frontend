@@ -7,6 +7,7 @@ import { InputCard } from '@/components/evaluation-viewer/input-card';
 import { OutputCard } from '@/components/evaluation-viewer/output-card';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import useSWR from 'swr';
+import { toCamelCase } from '@/lib/utils';
 
 interface EvaluationProps {
   evaluationSummary: EvaluationSummary;
@@ -48,16 +49,16 @@ export function EvaluationViewer() {
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR(evaluationURL, fetcher);
-  console.log('data', data);
-  console.log('error', error);
 
   // TODO: styling
   if (error) return <div className={'text-red-500'}>Error loading data</div>;
   if (!data) return <div>Loading...</div>;
 
+  const normalisedData = toCamelCase(data);
+
   if (!evaluationURL) {
     return <p>No evaluation selected.</p>;
   }
 
-  return <Evaluation evaluationSummary={data} />;
+  return <Evaluation evaluationSummary={normalisedData} />;
 }
