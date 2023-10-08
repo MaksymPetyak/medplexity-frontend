@@ -6,7 +6,7 @@ import { IconGitHub } from '@/components/ui/icons';
 
 export function Sidebar() {
   return (
-    <div className="flex h-screen flex-col justify-between w-[300px] md:w-1/3 overflow-hidden bg-gray-100 p-4 border-r border border-gray-300">
+    <div className="flex h-screen sticky top-0 flex-col justify-between w-[300px] md:w-1/3 overflow-hidden bg-gray-100 p-4 border-r border border-gray-300">
       <div>
         <p className={'text-lg font-semibold'}>Medplexity explorer</p>
         <p className={'text-xs font-normal'}>
