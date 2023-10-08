@@ -24,4 +24,18 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
       },
     },
   },
+  medqa: {
+    name: 'MedQA',
+    description:
+      'Multiple-choice questions based on the United States Medical License Exams (USMLE). It covers 3 languages, but here we only look at the English subset.' +
+        'Original paper: What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams\n' +
+        '28 Sep 2020 · Di Jin, Eileen Pan, Nassim Oufattole, Wei-Hung Weng, Hanyi Fang, Peter Szolovits \n' +
+        'https://arxiv.org/abs/2009.13081',
+    splits: {
+      validation: {
+        'gpt-4':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/medqa_validation(50)_gpt4_evaluation.json',
+      },
+    },
+  },
 };
