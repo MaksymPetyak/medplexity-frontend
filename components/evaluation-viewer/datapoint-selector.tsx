@@ -85,7 +85,11 @@ export function DatapointSelector({
           </div>
         </SelectTrigger>
         <SelectContent>
-          <SelectGroup className={'w-full'}>
+          <SelectGroup
+            className={
+              'w-full max-w-2xl max-h-[300px] overflow-y-scroll overflow-x-clip'
+            }
+          >
             {data.map((item, index) => (
               <SelectItem key={index} value={index.toString()}>
                 <div className={'flex justify-start items-center gap-2'}>
