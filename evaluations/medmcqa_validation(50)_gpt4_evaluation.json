@@ -11,7 +11,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Physiology" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Myelinated nerve fibers are wrapped in a myelin sheath, which increases the speed of nerve impulse conduction. This is because the myelin sheath allows the nerve impulse to jump from one node of Ranvier to the next, a process known as saltatory conduction. Therefore, the statement that impulse through myelinated fibers is slower than non-myelinated fibers is not true."
@@ -35,7 +35,7 @@
         "explanation": "Ans-a. The oncotic pressure of the fluid leaving the capillaries is less than that of fluid entering it Guyton I LpJ1 4-.;anong 23/e p653-6_)Glomerular oncotic pressure (due to plasma protein content) is higher than that of filtrate oncotic pressure in Bowman's capsule\"Since glucose is freely filtered and the fluid in the Bowman's capsule is isotonic with plasma, the concentration of glucose in the filtrate is the same as in the capillaries",
         "subject_name": "Physiology"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The oncotic pressure of the fluid leaving the capillaries is greater than that of the fluid entering it. This is because as fluid leaves the capillary, the concentration of proteins (which contribute to oncotic pressure) in the remaining blood increases. Therefore, the statement 'The oncotic pressure of the fluid leaving the capillaries is less than that of fluid entering it' is not true."
@@ -56,7 +56,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Medicine" },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The best advice for this woman would be to have an amniocentesis and chromosomal analysis. This is because the risk of having a second child with Down syndrome is increased after having one child with the condition. An ultrasound cannot definitively diagnose Down syndrome, and while maternal blood screening can indicate an increased risk, it cannot provide a definitive diagnosis. Therefore, amniotic fluid samples plus chromosomal analysis is the best option."
@@ -80,7 +80,7 @@
         "explanation": "Fast anterograde (400 mm/day) transport occurs by kinesin molecular motor and retrograde transport (200 mm/day) occurs by dynein molecular motor.",
         "subject_name": "Physiology"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Axonal transport is a cellular process responsible for movement of mitochondria, lipids, synaptic vesicles, proteins, and other cell parts (i.e., organelles) to and from a neuron's cell body, through the cytoplasm of its axon. This movement can be in both directions, towards the cell body (retrograde) or away from the cell body (antegrade). Therefore, axonal transport is both antegrade and retrograde."
@@ -104,7 +104,7 @@
         "explanation": "Answer- A. Glycogen synthesisLow insulin to glucagon ratio implies a catabolic state, i.e. usage of body stores to form energy, typically seen in fasting state ancl diabetes mellitus. Hence, this state will promote glycogen breakdown, gluconeogenesis as well as ketone body formation, while at the same time inhibiting glycogen synthesis and storage.",
         "subject_name": "Biochemistry"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. A low insulin to glucagon ratio is seen in conditions where the body needs to increase blood glucose levels. This includes glycogen breakdown (glycogenolysis), gluconeogenesis, and ketogenesis. However, glycogen synthesis is a process that occurs when there is a high insulin to glucagon ratio, as it is a process of storing glucose for future use when glucose levels are high."
@@ -123,7 +123,7 @@
         "explanation": "Answer- A. 0.01Tropicamide is the shoest acting mydriatic, concentration used is 0.5-l% drops (0.005-0.010).Tropicamide:Concentration used: 0.5-l% drops (0.005-0.010)Duration of action: Though effective for upto 3 hours, maximum effect appear 30 minutes after the last drop and lasts for only 10-15 minutesUsed in Adults.",
         "subject_name": "Ophthalmology"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Tropicamide is a medication used in eye drops that causes temporary paralysis of the pupil dilation muscle and the muscle that helps the eye focus, making it easier for your doctor to examine the inside of your eye. The concentration of tropicamide in these eye drops is typically 0.5% or 1%, but for diagnostic purposes, a lower concentration of 0.03% is often used."
@@ -147,7 +147,7 @@
         "explanation": "Ans: A. Pregnant woman with sore throat can be staed immediately on oseltamivir without diagnostic testing under category B(Ref. http..ilviww.molifir.nic.in/WriteReadData/1892s/ 804456402Categorisation.pcifi)Pregnant woman with sore throat can be staed immediately on oseltamivir without diagnostic testing under category B.Drug of choice - Oseltamivir (given for 10 days post-exposure). Priority groups (in order) for Influenza vaccinesPregnant womenHealthy young childrenAge >6 months with chronic medical conditionsHealthy adults 49-65 years15-49 years healthy young adultsHealthy adults > 65 years",
         "subject_name": "Medicine"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. According to the CDC, antiviral treatment is recommended as early as possible for any patient with confirmed or suspected influenza who is hospitalized; has severe, complicated, or progressive illness; or is at higher risk for influenza complications. This includes pregnant women. Therefore, a pregnant woman with a sore throat can be started immediately on oseltamivir without diagnostic testing under category B."
@@ -171,7 +171,7 @@
         "explanation": "*Kiesselbach's plexus: Antero superior pa is supplied by ANTERIOR & POSTERIOR ETHMOIDAL AERIES which are branches of ophthalmic aery, branch of INTERNAL CAROTID AERY. Antero inferior pa is supplied by SUPERIOR LABIAL AERY - branch of facial aery, which is branch of EXTERNAL CAROTID AERY. Postero superior pa is supplied by SPHENO-PALATINE AERY - branch of MAXILLARY aery, which is branch of ECA. POSTERO INFERIOR pa is supplied by branches of GREATER PALATINE AERY - branch of ECA Antero inferior pa/vestibule of septum contain anastomosis b/w septal ramus of superior labial branch of facial aery & branches of sphenopalatine, greater palatine & anterior ethmoidal aeries. These form a large capillary network called KIESSELBACH'S PLEXUS If dryness persists, bleeding will occur Therefore, in given options, Anterior ethmoidal aery is a branch of ICA not ECA",
         "subject_name": "Anatomy"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Kiesselbach's plexus is an anastomotic network of blood vessels in the anteroinferior part of the nasal septum. It receives blood from the sphenopalatine artery, greater palatine artery, and the septal branch of the superior labial artery, all of which are branches of the external carotid artery. The anterior ethmoidal artery, however, is a branch of the ophthalmic artery, which is a branch of the internal carotid artery, not the external carotid artery. Therefore, the anterior ethmoidal artery is not a branch of the external carotid artery in Kiesselbach's plexus."
@@ -195,7 +195,7 @@
         "explanation": "Option A- Broad QRS complex with normal sinus rhythm Digoxine toxicity Option B- P wave with fluctuating QRS complexes is seen. showing ELECTRICAL ALTERANS seen in large pericardial effusion in which hea is swinging. Option C- N Height in P wave: 2.5mm But in P-pulmonale: || by 1.5mm",
         "subject_name": "Medicine"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Without an actual ECG image, we can only make assumptions based on the options provided. Electrical alternans is a phenomenon where there is a beat-to-beat alternation in one or more components of the ECG signal. It is most often associated with pericardial effusion and cardiac tamponade, but can also occur in other conditions. Ventricular bigeminy refers to a specific pattern of heart rhythm, P pulmonale is a pattern seen in right atrial enlargement, and left ventricular failure would have various ECG changes depending on the severity and chronicity. Therefore, without an ECG image, the best answer based on the options provided is Electrical alternans."
@@ -219,7 +219,7 @@
         "explanation": "The findings in this newborn are\nCyanosis at birth\nOligaemic lung .fields\nNormal sized heart\nLets see each option one by one\nEbstein anomaly - It can be easily ruled out as there is marked cardiomegaly in it.\nTransposition of great vessels- There is cardiomegaly and plethoric lung fields see in it. So ruled out.\nNow the real confusion - between PA and TOF.\nTOF - in TOF there is oligaemic lung fields and normal sized heart but usually cyanosis is not present at birth.\n\u00a0\nNelson states - \u00a0\"Often cyanosis is not present at birth. but with increasing hypertrophy of the right ventricular infimdibulum and patient growth, cyanosis occurs later in the 1st year of life. But some cases may present with cyanosis at birth.\"\n\na Pulmonary atresia -\n\nThe child is cyanotic at birth\nThere is pulmonary oligaemia\nBut the heart is of variable size (from small to enlarge)",
         "subject_name": "Pediatrics"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The clinical picture of a blue newborn with cyanosis, oligemic lung fields (meaning reduced blood flow to the lungs), and a normal-sized heart is most consistent with pulmonary atresia. This is a congenital heart defect where the pulmonary valve does not form properly, causing reduced blood flow to the lungs and resulting in cyanosis."
@@ -240,7 +240,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Pathology" },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Dental caries spread laterally primarily through the enamel lamellae. These are thin, leaf-like structures that extend from the enamel surface to the dentinoenamel junction. They are filled with organic material and provide a pathway for bacteria and acids to penetrate the enamel, facilitating the spread of caries."
@@ -264,7 +264,7 @@
         "explanation": "Ans: A. Before performing the ABG, syringe should be loaded with 0.3 cc of heparin(Ref: Harrison 18/e p364; http:// emedicine.medscape.comlaiclell 902703-overview).Care should be taken when measuring blood gases to obtain the aerial blood sample without using excessive heparin.Heparin should be expelled from the syringe after loading as it may lead to false pCO2 readings.Precautions:Most syringes come pre-packaged & contain a small amount of heparin, to prevent coagulation.Other syringes may need to be heparinized, by drawing up a small amount of liquid heparin & squiing it out again to remove air bubbles.Once the sample is obtained, care is taken to eliminate visible gas bubbles, as these bubbles can dissolve into the sample & cause inaccurate results.",
         "subject_name": "Medicine"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. An ABG (Arterial Blood Gas) test measures the acidity (pH) and the levels of oxygen and carbon dioxide in the blood from an artery. This test is used to check how well your lungs are able to move oxygen into the blood and remove carbon dioxide from the blood. The radial artery is indeed the preferred site for an ABG. If the modified Allen's test is negative, a different site should be tried. Normal pH, HCO3, and PCO2 levels may not indicate absence of an acid-base imbalance. However, before performing the ABG, the syringe should be loaded with 1000 units/ml of heparin, not 0.3 cc."
@@ -288,7 +288,7 @@
         "explanation": "Ans: B. Pre-Botzinger complexRef: Ganong 25Ie p656, 24Ie p658)Rhythmic respiration is initiated by a small group of synaptically coupled pacemaker cells in the pre-Botzinger complex (pre-BOTC) on either side of the medulla between the nucleus ambiguus and the lateral reticular nucleus.The main components of the respiratory control pattern generator responsible for automatic respiration are located in the medulla. Rhythmic respiration is initiated by a small group of synaptically coupled pacemaker cells in the pre-Botzinger complex (pre-BOTC) on either side of the medulla between the nucleus ambiguus and the lateral reticular nucleus.",
         "subject_name": "Physiology"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The Pre-B\u00f6tzinger complex (preB\u00f6tC) is a cluster of interneurons located in the ventrolateral medulla. It is critical for the generation of respiratory rhythm in mammals. Therefore, the respiratory rhythm generation center is located at the Pre-Botzinger complex."
@@ -307,7 +307,7 @@
         "explanation": "Ans. a. ACA (Ref: Harrison 19/e p163, 18/e p193)Gait apraxia is seen in thromboembolic episode involving anterior cerebral aery.Frontal lobe is mainly supplied by anterior cerebral aery; its occlusion leads to gait apraxia",
         "subject_name": "Medicine"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Gait apraxia is a disorder of motor planning often associated with normal pressure hydrocephalus, frontal lobe lesions, and sometimes with lesions of the corpus callosum. The Anterior Cerebral Artery (ACA) supplies the medial part of the frontal lobe and the superior medial parietal lobes, areas involved in motor planning and hence, a thromboembolic episode involving ACA can lead to gait apraxia."
@@ -328,7 +328,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Heavy forces on the periodontal ligament can cause hyalinization. Hyalinization is a process where the periodontal ligament undergoes necrosis due to excessive pressure. This results in the formation of a hyalinized (glassy, homogenous) zone. The other options listed are not typically associated with heavy forces on the periodontal ligament."
@@ -349,7 +349,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Microbiology" },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Neisseria gonorrhoeae is indeed a common cause of urethritis in males and is found exclusively in human beings. Disseminated gonococcal infection can be caused by axoregnic strains. However, not all strains of N. gonorrhoeae are highly susceptible to penicillin. In fact, resistance to penicillin (and other antibiotics) has been a significant problem with this bacterium."
@@ -373,7 +373,7 @@
         "explanation": "Ans. a. Assess the patient, give bag and mask ventilation and look for spontaneous breathingIn self-extubation, assess the patient, give bag and mask ventilation and look for spontaneous breathing.Unplanned ExtubationUnplanned extubation of mechanically ventilated patients is relatively commonSelf-extubation refers to the patient's action, who deliberately removes the endotracheal tube (MC type of unplanned extubation, typically occur at night)Accidental extubation is attributed either to personnel's inappropriate manipulation of the tube during patient care or to a non-purposeful patient's action, e.g. coughing (mostly occur in the morning) Risk Factors for Unplanned ExtubationPatient factorsStaff factorsMaleDeliriumLight sedationDifficulty in securing tube (e g. facial swelling, facial burns)Previous unplanned extubationJunior staffNurse-to-patient ratioInadequately secured endotracheal tubeand/or checks",
         "subject_name": "Anaesthesia"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The first step in managing a patient who has self-extubated is to assess the patient's condition. This includes checking for signs of respiratory distress and providing bag-mask ventilation if necessary. If the patient is breathing spontaneously and does not appear to be in distress, reintubation may not be immediately necessary. Therefore, the best answer is to assess the patient, give bag and mask ventilation and look for spontaneous breathing."
@@ -394,7 +394,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The description of a thick, curd-like white patch on the buccal mucosa that leaves an erythematous patch when rubbed is characteristic of oral thrush, which is caused by Candida species. This is a common condition in infants and can be easily treated with antifungal medication. Therefore, the most likely diagnosis is Candidiasis."
@@ -413,7 +413,7 @@
         "explanation": "* Doppler is based on frequency shift and color coding depends on the direction of blood flow* Direction of blood flow:- Flow towards the probe- Red- Flow away from probe- Blue Intensity of color depends on velocity of flow Doppler effect: change in frequency because of relative motion between moving source of sound and observer. Direction of flow Color doppler showing CCA bifurcation Spectral doppler: Cursor is placed into the area of blood vessel we want to trace and its velocity is measured.An angle has to be maintained to obtain a proper image- Ideal angle = 0o (practically not possible)- Optimal angle = 45o-60o (never 90o) Spectral doppler of aeries Low resistance High resistance Example:* Brain aeries* ICA* CCA* VA- Renal aeries| Monophasic with pattern pulsatility Example: - Extremity aeries* ECA | Triphasic pattern Normal Peripheral Aerial Waveform Triphasic waveform Initial high velocity forward flow component Early diastolic reverse flow component Late diastolic forward flow component Narrow systolic window * Venous doppler:- It is Monophasic- during free breathing variations in amplitude due to cardiac and respiratory phasicity- In breath hold- pressure changes of . Atrium are reflected back in the major veins",
         "subject_name": "Radiology"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Normal venous blood flow in the lower limb is characterized by a triphasic pattern on duplex Doppler ultrasound. This pattern consists of forward flow during systole, reverse flow during early diastole, and forward flow during late diastole."
@@ -434,7 +434,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Calcium hydroxide is used in pulpotomy procedures to stimulate the formation of a calcific bridge over the pulp exposure. The calcium ions necessary for this process are derived from the blood supply to the tooth, not from the calcium hydroxide itself or from the dentin. Therefore, the source of calcium ions in a calcific bridge following a calcium hydroxide pulpotomy is blood vessel borne."
@@ -458,7 +458,7 @@
         "explanation": "Answer- B. 1, decreases2,3-BPG binds to 1 site of haemoglobin and decreases the affinity for oxygen.2, 3 Bisphosphoglycerate (2,3- BPG) or 2,3 Diphosphoglycerate 2,3- DPG)It is most abundant organic phosphate in RBC.",
         "subject_name": "Biochemistry"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. 2,3-Bisphosphoglycerate (2,3-BPG) is a substance formed in the red blood cells during the breakdown of glucose from food. It binds to hemoglobin in red blood cells and affects its ability to bind oxygen. 2,3-BPG binds to the central cavity in the T state of hemoglobin, stabilizing it and promoting the release of oxygen. Therefore, the presence of 2,3-BPG decreases the affinity of hemoglobin for oxygen."
@@ -482,7 +482,7 @@
         "explanation": "Bag and mask-100% O2 Venturi mask- 60% O2 Nasal cannula - 40% O2 Mask with reservoir- 80-90% O2",
         "subject_name": "Anaesthesia"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The highest concentration of oxygen is delivered through a mask with reservoir bag. This can deliver up to 90-95% oxygen concentration. The other options like nasal cannula, venturi mask and bag and mask deliver lower concentrations of oxygen."
@@ -503,7 +503,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The sharpest cusp is seen in the upper canine. The upper canine is also known as the 'eye tooth' due to its alignment under the eyes and its long, pointed shape. It is the longest tooth in the mouth and has a sharp cusp for tearing food."
@@ -522,7 +522,7 @@
         "explanation": "Before answering these questions lets first discuss hepatitis in brief.\nMaternal infection: The acute infection is manifested by flu like illness as malaise, anorexia, nausea and vomiting. In majority, it remains asymptomatic. Jaundice is rare and fever is uncommon.\nClinical course (HBV): Nearly 90\u201395% of patients clear the infection and have full recovery. 1% develop fulminant hepatitis resulting massive hepatic necrosis. 10-15% become chronic and 10% of these chronic cases suffer from chronic active hepatitis, cirrhosis and hepatocellular carcinoma.\nDiagnosis is confirmed by serological detection of HBsAg, HBeAg (denote high infectivity) and antibody to hepatitis B core antigen (HBcAg) and HBV DNA titer (107\u20131011).\nScreening: All pregnant women should be screened for HBV infection at first antenatal visit and it should be repeated during the third trimester for \u2018high risk\u2019 groups (intravenous drug abusers, sexual promiscuity, hemophilics, patients on hemodialysis or having multiple sex partners).\nHepatitis C (HCV):\nIt is recognized as the major cause of non-A, non-B hepatitis worldwide and is the leading cause of transfusion associated hepatitis. Transmission is mainly blood borne and to a lesser extent by faecal-oral route. It is responsible for chronic active hepatitis and hepatic failure.\nPerinatal transmission (10\u201340%) is high when coinfected with HIV and HBV.\nDetection is by antibody to HCV by EIA, which develops usually late in the infection.\nConfirmation is done by recombinant immunoblot assay (RIBA-3).\nChronic carrier state is present. Breastfeeding is not contraindicated.\nHepatitis D (HDV):\nIt is seen in patients infected with HBV either as a co-infection or super infection. Perinatal transmission is known.\nHepatitis E (HEV): Hepatitis E is the most important cause of non-A, non-B hepatitis in developing countries like India. Chronic carrier state is present. Perinatal transmission is uncommon.\nMaternal mortality is very high (15\u201320%).",
         "subject_name": "Gynaecology & Obstetrics"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The risk of transmission of Hepatitis B from a mother who is Hbs Ag positive and anti Hbe Ag positive to her child is about 20%. This is because the presence of Hbe Ag is associated with high levels of viral replication and therefore increased infectivity. However, the mother in this case is anti-Hbe Ag positive, which means she has antibodies against Hbe Ag, indicating lower levels of viral replication and therefore a lower risk of transmission."
@@ -538,7 +538,7 @@
         "options": ["Average", "High", "Incomplete", "Low"]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The lip line is described as 'average' when the lips are competent (closed) at rest and the lip line is opposite the tips of the upper incisors. A 'high' lip line would show more of the upper teeth and gums, while a 'low' lip line would show less of the upper teeth."
@@ -557,7 +557,7 @@
         "explanation": "Low esterase levels are suggestive of overdose of some drug which acts by inhibiting acetyl choline esterase like organophosphate poisoning. Inhibition of choline esterase results In increased amount of Ach at synapse, so poisoning or overdose results in cholinergic symptoms like salivation, lacrimation, urination, emesis, increased bronchial secretions, reduction in blood pressure.So treatment Of choice is Atropine. Atropine -It is highly effective in counter-acting the muscarinic symptoms, but higher doses are required to antagonize the central effects. It does not reverse peripheral muscular paralysis which is a nicotinic action. All cases of anti-ChE (carbamate or organophosphate) poisoning must be promptly given atropine2 mg i.v. repeated every 10 min till dryness of mouth or other signs of atropinization appear (upto 200 mg has been administered in a day). Continued treatment with maintenance doses may be required for 1-2 weeks. Neostigmine and physostigmine worsens the signs and symptoms as these also act by inhibiting choline esterase. Physostigmine and flumazenil are respectively used for Atropine and benzodiazepines poisoning.",
         "subject_name": "Pharmacology"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The patient's symptoms suggest an overdose of a cholinergic drug, which increases the levels of acetylcholine in the body. This can lead to increased salivation and bronchial secretions, as well as low blood pressure. Atropine is an anticholinergic drug that blocks the effects of acetylcholine, and is commonly used to treat cholinergic overdoses. Therefore, the best treatment for this person would be atropine."
@@ -578,7 +578,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The design of the bar clasp used in dental procedures is typically determined by the dentist based on the specific needs and situation of the patient. Therefore, the choice of the dentist is the correct answer."
@@ -599,7 +599,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Class II inlay gingival margins preparation involves removal of weak enamel rods, increased metal burnishability, and lap sliding fit of metal margin. However, the margins of restoration are not necessarily in a self-cleansable area. Therefore, the statement that the margins of restoration are in a self-cleansable area is not true regarding Class-II inlay gingival margins preparation."
@@ -620,7 +620,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Periodontitis is a serious gum infection that damages the soft tissue and destroys the bone that supports your teeth. It's often the result of poor oral hygiene. Bacteria in dental plaque produce enzymes such as collagenase that break down the periodontal ligament and other supporting structures leading to periodontitis. Therefore, the bacterial enzyme responsible for the breakdown of periodontal fibres in periodontitis is collagenase."
@@ -644,7 +644,7 @@
         "explanation": "Ans: C. Student's T-test(Ref Park 22/e p795; Biostatistics by Mahajan 7/e p134)Here, comparing a parametric quantitative variable (weight) in two unrelated group of people.Hence, \"Student's t-test\" used.Student t-test:Used when outcome variable is normally distributed in population (for quantitative data).Ex: BP, blood glucose.",
         "subject_name": "Social & Preventive Medicine"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The Student's T-test is used to compare the means of two independent groups. In this case, the two groups are newborns whose mothers received food supplements and those whose mothers did not. The variable being compared (newborn weight) is continuous, making the Student's T-test the appropriate choice."
@@ -663,7 +663,7 @@
         "explanation": "Glycogen phosphorylase is the rate limiting enzyme of glycogenolysis. And it requires PLP. The active form of vitamin B6 is the coenzyme pyridoxal phosphate (PLP) PLP can be synthesized from the three compounds pyridoxine, pyridoxal and pyridoxamine. This PLP for this enzyme Glycogen phosphorylase is not required as co-enzyme, but it act as a phosphate donor. Enzyme glycogen phosphorylase will cut glycogen a (1-4) bond apa and the glucose released are transferred in Glucose-1-phosphate and that phosphate is taken from PLP.",
         "subject_name": "Biochemistry"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Glycogen phosphorylase is the primary enzyme involved in glycogenolysis. It requires pyridoxal phosphate (PLP) as a cofactor. PLP is the active form of vitamin B6. Therefore, vitamin B6 or PLP is required for glycogen phosphorylase."
@@ -684,7 +684,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The best way to handle a child's fear or anxiety related to dental procedures is through familiarization and desensitization. This involves gradually introducing the child to the dental environment and procedures in a non-threatening way. Using another child as an example may not work if the child is not receptive to comparison. Using barbiturates is not recommended due to potential side effects and risks associated with sedation in children. Firmness may not be effective and could potentially increase the child's fear or anxiety. Therefore, modifying his fear by familiarization is the most satisfactory method of handling the situation."
@@ -708,7 +708,7 @@
         "explanation": "Answer- A (Cricoid cailage)(Ref: BDC 5/e Vol lII/p238)Complete cailage ring is seen in Cricoid cailage.Cricoid cailage is shaped like a ring. It encircles the larynx below the thyroid cailage. It is thicker and stronger than the thyroid cailage.",
         "subject_name": "Anatomy"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The cricoid cartilage is the only complete ring of cartilage around the trachea. It forms the back part of the voice box and functions as a support structure for the trachea. The thyroid cartilage, corniculate cartilage, and epiglottis are not complete rings."
@@ -727,7 +727,7 @@
         "explanation": "For intubation: 1st step: Morning sniffing position: extension of atlanto-occipital joint and flexion of neck. 2nd step: Introduction of laryngoscope 3rd step: Push the tongue away, visualize the epiglottis, aryepiglottic fold, hinge the tip of laryngoscope with aryepiglottic fold and lift the laryngoscope to visualize the glottic opening. 4th step: Introduce ETT and inflate the cuff 5th check for bilateral breath sound FIXATION of the ETT.",
         "subject_name": "Anaesthesia"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The correct sequence of steps for intubation is: a. Head extension and flexion of neck (to align the airway), b. Introduction of laryngoscope (to visualize the vocal cords), c. Inflation of cuff (to secure the tube in place and prevent aspiration), d. Check breath sounds with stethoscope (to confirm correct placement), e. Fixation of the tube to prevent dislodgement (to ensure the tube stays in place). Therefore, the correct answer is ABCDE."
@@ -746,7 +746,7 @@
         "explanation": "Erythroblastosis fetalis is caused by the transplacental passage of maternal antibody active against paternal RBC antigens of the infant and is characterized by an increased rate of RBC destruction.\nAlthough more than 60 different RBC antigens are capable of eliciting an antibody response, significant disease is associated primarily D antigen of Rh group and with A 0 incompatibility.\nOther rare antigens involved are -\n\n\nC or E antigen of Rh group\nRBC antigens - Cw, Cx, Cu, K (kell), M, Duffy, S, P, MNS, Xg, Lutheran, Diego and Kidd.\n\n\nAnti-Lewis antibodies do not cause disease.",
         "subject_name": "Pediatrics"
       },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Erythroblastosis fetalis, also known as hemolytic disease of the newborn, is a condition that occurs when there is incompatibility between the blood types of the mother and the baby. This can occur with Rh incompatibility (Anti-D) or other blood group incompatibilities such as Anti-C and Anti-E. However, Anti-Lewis does not cause erythroblastosis fetalis because Lewis system antibodies are usually naturally occurring, IgM, and do not cross the placenta."
@@ -770,7 +770,7 @@
         "explanation": "Convalescent carrier is the host who continues to harbor the microorganism even after recovering from the clinical disease caused by the same pathogen.\nKey Points\u00a0\nHBsAg:\n\nThe antigen appears in blood during incubation period and is detectable in most patients during the prodrome and acute phase of the disease.\nPersistent presence of HBsAg in blood for at least 6 months indicates the carrier state and also indicates the risk of chronic hepatitis and hepatic carcinoma. It is not detectable in the serum during convalescent stage. The presence of HBsAg alone does not necessarily indicate the replication of complete virion, and the patients may not have symptoms of liver damage.\u00a0\n\nParija SC. Textbook of Microbiology & Immunology. Elsevier Health Sciences; 2014. Page:74,553",
         "subject_name": "Microbiology"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. A healthy carrier or asymptomatic carrier is a person or other organism that has become infected with a pathogen, but who display no signs nor symptoms. Although unaffected by the disease themselves, carriers can transmit it to others. In this case, the dentist had Hepatitis B infection 3 months back and his laboratory tests are normal now, which means he is not currently showing any symptoms of the disease. However, he could still be carrying the virus and potentially transmit it to others, especially in a surgical setting where there is potential for blood exposure. Therefore, he is a healthy carrier."
@@ -794,7 +794,7 @@
         "explanation": "Answer- B. A baby born at 28 weeks of gestationPremature baby needs to be screenedfor Retinopathy of prematurity.All babies weighing <1500 gm or having a gestational period <32 weeks should be screened with indirect ophthalmoscopybetween 32-36 weeks postconception.",
         "subject_name": "Pediatrics"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. A baby born at 28 weeks of gestation is considered extremely preterm. These babies are at risk for a number of complications, including retinopathy of prematurity (ROP), a potentially blinding eye disorder that primarily affects premature infants. Therefore, an ophthalmologist would be consulted for a baby born at 28 weeks of gestation to monitor and treat any potential eye problems."
@@ -818,7 +818,7 @@
         "explanation": "Prognosis of hepatic failure in children \n\nChildren with hepatic failure have somewhat better prognosis.\nThe prognosis varies considerably with -\n\ni) Cause of liver failure\nii) Stage of hepatic encephalopathy\n\nPoor prognostic factors for mortality\n\n\nIf cause of liver failure is\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2014>\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 Wilson disease, idiopathic\nStage IV coma \u2014> Most common cause of death is brain stem herniation\nAge < I year\nSepsis\nSevere hemorrhage\nRenal failure\n, Need for dialysis before transplantation\n\nFor option b & c -\n\"Pretransplant serum bilirubin concentration and the INR (prothrombin time) of coagulation are not predictive\u00a0of post transplant survival\".",
         "subject_name": "Pediatrics"
       },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. In liver failure, the liver's ability to produce clotting factors is impaired, leading to an increased prothrombin time (PT). This is a measure of how long it takes blood to clot. An increasing PT is a sign of worsening liver function and is associated with a poor prognosis. Therefore, an increasing prothrombin time is the most important prognostic factor for death in a child with active liver failure."
@@ -842,7 +842,7 @@
         "explanation": "Friends this is one of those questions where we can derive the answer by excluding other options as very little information has been provided to us.\nSudden post partum collapse \u2013 may be seen in all the four cases viz \u2013 amniotic fluid embolism, PPH, uterine inversion and eclampsia.\nBut in case of PPH antecedent H/O excessive blood loss, in eclampsia \u2013 H/O antecedent convulsions and in amniotic fluid embolism \u2013 H/O abrupt onset of respiratory distress before collapse should be present, which is not given in the question so these options are being excluded.\nThe clinical picture of acute inversion occurring in the third stage of labour is characterised by shock and haemorrhage, the shock being out of proportion to the bleeding.\nSince this a problem which occurs due to mismanaged third stage of labour, patient doesnot have any complain in the antenatal period or during labour.\nUterine inversion \u2013 \u201cIt should be suspected whenever a woman has unexplained postpartum collapse.\u201d\nTextbook of Obs, Sheila Balakrishnan, p 489",
         "subject_name": "Gynaecology & Obstetrics"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. All of the options listed can cause shock after delivery, but the key word here is 'immediately'. Postpartum hemorrhage (PPH) and uterine inversion usually do not cause immediate shock. Eclampsia typically presents with seizures. Amniotic fluid embolism, however, can cause sudden and severe shock immediately after delivery, making it the most likely cause in this scenario."
@@ -866,7 +866,7 @@
         "explanation": "Ans. c. Basal degeneration",
         "subject_name": "ENT"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The patient's symptoms are characteristic of lichen planus, a condition that affects the skin and mucous membranes. Microscopic findings in lichen planus typically include basal cell degeneration."
@@ -890,7 +890,7 @@
         "explanation": "Ans. b. Brisk jaw jerk(Ref: De Jongs Neurological examination/ p194, 201, 474.'Jaw jerk is exaggerated in supranuclear lesions that are above the mid pons.",
         "subject_name": "Medicine"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. Myelopathy refers to any neurologic deficit related to the spinal cord. When it occurs in the cervical region, it can lead to symptoms such as brisk reflexes (like a brisk jaw jerk or pectoral jerk) and bladder dysfunction (like urgency and incontinence of micturition). However, sensory loss in the facial area is not typically associated with myelopathy, as the trigeminal nerve (which provides sensation to the face) has its sensory nucleus in the brainstem, not the spinal cord."
@@ -914,7 +914,7 @@
         "explanation": "Answer- A. High level expe group of universal health program for indiaConcept of 3 years bachelor para-medical course for rural health service was proposed by Ministry of health and family welfare and received backing of Planning Commission of India's High level expe group of universal health program.",
         "subject_name": "Social & Preventive Medicine"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(C)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The Srivastava Committee recommended a 3-year bachelor degree in medical education for rural health service. This was proposed to address the shortage of doctors in rural areas."
@@ -938,7 +938,7 @@
         "explanation": "Ans: D. AllThe NT scan must be done between 11 and 14 weeks pregnant, because this is when the base of baby's neck is still transparent. (The last day for scan is 13 weeks and 6 days pregnant.)Triple marker test is performed in pregnant women at the end of first trimester and the beginning of the second trimester.The anomaly scan, also sometimes called the anatomy scan, 20 week ultrasound, or level 2 ultrasound, is a pregnancy ultrasound performed between 18-22 weeksA growth scan is an ultrasound scan that determines whether your baby's growth is normal. Doctors typically recommend it for women during the third trimester of pregnancy; one of the reasons it is also a fetal growth scan between 28 weeks and 32 weeks of pregnancy.",
         "subject_name": "Pediatrics"
       },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(D)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The sequential arrangement of fetal scans includes all the options mentioned. The NT scan is usually done between 11 and 14 weeks of pregnancy. The triple marker test is done between 15 and 20 weeks of gestation. An anomaly scan is done at around 20 weeks. A growth scan can be done anytime after 28 weeks. Therefore, the answer is all of the above."
@@ -962,7 +962,7 @@
         "explanation": "Ans: D. Lanz incisionLanz incision:An oblique (transverse skin crease), muscle splitting incision used for an appendectomy.A modification of McBurney's (Grid Iron) incision.Advantages:Considered cosmetically better.Exposure is better.The extension is easier.Measurements:Incision, appropriate in length to size & obesity of patient - Approximately 2 cm below umbilicus centered on the midclavicular-mid inguinal line.It can be extended medially - With retraction or suitable division of rectus abdominis muscle.",
         "subject_name": "Surgery"
       },
-      "expected_output": 3,
+      "expected_output": "(D)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. A muscle splitting incision is one that goes along the direction of the muscle fibers, allowing them to separate without cutting through them. This type of incision is less damaging to the muscle and allows for faster healing. The Rutherford-Morrison incision is a type of muscle splitting incision used in abdominal surgery."
@@ -978,7 +978,7 @@
         "options": ["Africas", "Caucians", "Not Recalled", "Not Recalled"]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The prevalence of multiple canals in mandibular premolars varies among different ethnic groups. According to dental literature, it is more common in Caucasians."
@@ -997,7 +997,7 @@
         "explanation": "Answer: B. DivisionDivision does not give branches",
         "subject_name": "Anatomy"
       },
-      "expected_output": 1,
+      "expected_output": "(B)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The brachial plexus is a network of nerves that originate from the spinal cord in the neck and travel down the arm. These nerves provide the upper limb with sensory and motor functions. The brachial plexus is divided into five sections: roots, trunks, divisions, cords, and branches. Out of these, the divisions do not give off any branches."
@@ -1021,7 +1021,7 @@
         "explanation": "Answer- A. Cell cycle will stop at GI phaseRb is a tumor suppressor gene. It normally arrests cell division at G1-S phase. Phosphorylation of Rb gene allows the cell to divide, hence inhibition of phosphorylation (which is the constitutive scenario for Rb gene) arrests the cell in GI phase.RB (Retinoblastoma) geneLocated on chromosome on 13q14Tumor suppressive pocket protein that binds E2F transcription factors in hypophophorylated stateKey negative regulator of G1/S cell cycle transition . Tumors associated: Retinoblastoma, osteosarcoma, Glioblastoma, small cell carcinoma of lung, CA breast & CA bladderSequence: Go- G1- S- G2 - M",
         "subject_name": "Pathology"
       },
-      "expected_output": 0,
+      "expected_output": "(A)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The Rb gene product is a negative regulator of the cell cycle and prevents the cell from entering S phase. When it is phosphorylated, it becomes inactive, allowing the cell cycle to progress. If the Rb gene phosphorylation is defective, it will remain active and prevent the cell from progressing past the G1 phase. Therefore, the cell cycle will stop at the G1 phase."
@@ -1042,7 +1042,7 @@
         ]
       },
       "input_metadata": { "explanation": null, "subject_name": "Dental" },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(A)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The cumulative index is also known as the Russell's Periodontal Index. This index measures the cumulative damage caused by periodontal disease."
@@ -1066,7 +1066,7 @@
         "explanation": "Paneth cells or zymogen cells are found only in the deeper parts of the intestinal crypts.\n\u00a0They contain prominent eosinophilic secretory granules.\n\u00a0They also contain high amount of zinc.\n\u00a0They are known to produce lysozyme, defensins and TNF alpha that destroy bacteria.\n\u00a0They exceptionally migrate towards the base of the crypts of Lieberkuhn instead of going toward the villi",
         "subject_name": "Anatomy"
       },
-      "expected_output": 2,
+      "expected_output": "(C)",
       "output": {
         "answer": "(B)",
         "explanation": "Let\u2019s solve this step-by-step, referring to authoritative sources as needed. The cells that proliferate from the top to the bottom of the villi are the goblet cells. These cells are responsible for producing and secreting mucus, which protects the lining of the gut and aids in the movement of food through the digestive tract."
@@ -1084,7 +1084,7 @@
           "question": "Which of the following blade angle is appropriate for scaling and root planing",
           "options": ["A", "B", "C", "D"]
         },
-        "expected_output": 1,
+        "expected_output": "(B)",
         "metadata": {
           "explanation": "Blade angulation.\n(A) 0 degrees: correct angulation for blade insertion.\n(B) 45 to 90 degrees: correct angulation for scaling and root planing.\n(C) less than 45 degrees: incorrect angulation for scaling and root planing.\n(d) More than 90 degrees: incorrect angulation for scaling and root planing, but correct angulation for gingival curettage.",
           "subject_name": "Dental"
