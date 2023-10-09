@@ -23,7 +23,11 @@ export function DatasetSelector({
   return (
     <div>
       <p className={'font-normal text-sm'}>Datasets</p>
-      <Select value={value} onValueChange={onValueChange}>
+      <Select
+        value={value}
+        onValueChange={onValueChange}
+        disabled={options.length <= 1}
+      >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select data set" />
         </SelectTrigger>

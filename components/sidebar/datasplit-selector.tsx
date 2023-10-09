@@ -24,7 +24,11 @@ export function DataSplitSelector({
   return (
     <div className="ml-2">
       <p className={'font-normal text-sm'}>Config</p>
-      <Select value={value} onValueChange={onValueChange}>
+      <Select
+        value={value}
+        onValueChange={onValueChange}
+        disabled={options.length <= 1}
+      >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select data split" />
         </SelectTrigger>
