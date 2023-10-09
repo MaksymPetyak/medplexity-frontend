@@ -37,6 +37,7 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
         <InputCard
           inputs={selectedDatapoint.input}
           inputsMetadata={selectedDatapoint.inputMetadata}
+          expectedOutput={selectedDatapoint.expectedOutput}
         />
         <PromptCard
           prompt={prompt}
