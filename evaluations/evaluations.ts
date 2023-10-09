@@ -38,4 +38,17 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
       },
     },
   },
+  healthsearchqa: {
+    name: 'HealthSearchQA',
+    description:
+      'Dataset of consumer health questions released by Google for the Med-PaLM paper. This HealthSearchQA dataset consists of 3,173 commonly searched consumer health questions. These questions were curated using seed medical conditions and their associated symptoms, reflecting real-world consumer concerns in the healthcare domain.\n' +
+      'Paper: Large Language Models Encode Clinical Knowledge\n' +
+      '2022 * Singhal, K., Azizi, S., Tu, T. et al. https://arxiv.org/abs/2212.13138',
+    splits: {
+      train: {
+        'gpt-4':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_gpt4_evaluation.json',
+      },
+    },
+  },
 };
