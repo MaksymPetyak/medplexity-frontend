@@ -44,7 +44,7 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
           promptTemplate={evaluationSummary.promptTemplate}
         />
         <OutputCard
-          outputs={selectedDatapoint.output}
+          output={selectedDatapoint.output}
           outputsMetadata={outputMetadata}
         />
       </div>

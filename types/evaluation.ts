@@ -3,7 +3,7 @@ export interface EvaluationResult {
   input: Record<string, any>;
   inputMetadata: Record<string, any> | null;
   expectedOutput: string;
-  output: Record<string, any>;
+  output: Record<string, any> | string;
   outputMetadata: Record<string, any> | null;
   correct: boolean;
 }
