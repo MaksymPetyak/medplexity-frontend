@@ -3,26 +3,35 @@ import { Separator } from '@/components/ui/separator';
 import { prettyPrint } from '@/lib/utils';
 
 interface OutputCardProps {
-  outputs: Record<string, any>;
+  output: Record<string, any> | string;
   outputsMetadata: Record<string, any> | null;
 }
 
-export function OutputCard({ outputs, outputsMetadata }: OutputCardProps) {
+export function OutputCard({ output, outputsMetadata }: OutputCardProps) {
   return (
     <CollapsableCard title={'Outputs'} isDefaultOpen>
       <div className={'flex flex-col gap-2'}>
-        {Object.entries(outputs).map(([key, value], index) => (
-          <div key={index}>
-            <strong>{key}:</strong> {prettyPrint(value)}
+        {typeof output === 'string' ? (
+          <div>
+            <strong>Answer:</strong> {output}
           </div>
-        ))}
-        <Separator />
-        {outputsMetadata &&
-          Object.entries(outputsMetadata).map(([key, value], index) => (
+        ) : (
+          Object.entries(output).map(([key, value], index) => (
             <div key={index}>
               <strong>{key}:</strong> {prettyPrint(value)}
             </div>
-          ))}
+          ))
+        )}
+        {outputsMetadata && (
+          <div>
+            <Separator />
+            {Object.entries(outputsMetadata).map(([key, value], index) => (
+              <div key={index}>
+                <strong>{key}:</strong> {prettyPrint(value)}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </CollapsableCard>
   );

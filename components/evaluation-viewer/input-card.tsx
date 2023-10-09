@@ -21,19 +21,22 @@ export function InputCard({
             <strong>{key}:</strong> {prettyPrint(value)}
           </div>
         ))}
-        <Separator />
         {expectedOutput !== null && (
           <div>
+            <Separator />
             <strong>Expected answer:</strong> {expectedOutput}
           </div>
         )}
-        <Separator />
-        {inputsMetadata &&
-          Object.entries(inputsMetadata).map(([key, value], index) => (
-            <div key={index}>
-              <strong>{key}:</strong> {prettyPrint(value)}
-            </div>
-          ))}
+        {inputsMetadata && (
+          <div>
+            <Separator />
+            {Object.entries(inputsMetadata).map(([key, value], index) => (
+              <div key={index}>
+                <strong>{key}:</strong> {prettyPrint(value)}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </CollapsableCard>
   );
