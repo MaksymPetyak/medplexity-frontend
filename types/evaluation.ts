@@ -5,7 +5,7 @@ export interface EvaluationResult {
   expectedOutput: string;
   output: Record<string, any> | string;
   outputMetadata: Record<string, any> | null;
-  correct: boolean;
+  correct: boolean | null;
 }
 
 export interface FailedEvaluation {

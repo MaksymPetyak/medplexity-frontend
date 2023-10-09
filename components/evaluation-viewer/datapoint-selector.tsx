@@ -17,6 +17,18 @@ interface ResultsSelectorProps {
   onValueChange: (value: EvaluationResult) => void;
 }
 
+function CorrectnessIcon({ isCorrect }: { isCorrect: boolean | null }) {
+  if (isCorrect === null) {
+    return null;
+  }
+
+  return isCorrect ? (
+    <CheckCircle className={'w-8 text-green-400'} />
+  ) : (
+    <XCircle className={'w-8 text-red-400'} />
+  );
+}
+
 export function DatapointSelector({
   data,
   onValueChange,
@@ -93,11 +105,7 @@ export function DatapointSelector({
             {data.map((item, index) => (
               <SelectItem key={index} value={index.toString()}>
                 <div className={'flex justify-start items-center gap-2'}>
-                  {item.correct ? (
-                    <CheckCircle className={'w-8 text-green-400'} />
-                  ) : (
-                    <XCircle className={'w-8 text-red-400'} />
-                  )}
+                  <CorrectnessIcon isCorrect={item.correct} />
                   <p
                     className={
                       'w-full overflow-hidden whitespace-nowrap text-overflow-ellipsis'
