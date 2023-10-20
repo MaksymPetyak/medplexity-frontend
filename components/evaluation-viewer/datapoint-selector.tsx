@@ -111,7 +111,9 @@ export function DatapointSelector({
                       'w-full overflow-hidden whitespace-nowrap text-overflow-ellipsis'
                     }
                   >
-                    {item.input.question}
+                    {typeof item.input === 'string'
+                      ? item.input
+                      : item.input.question}
                   </p>
                 </div>
               </SelectItem>

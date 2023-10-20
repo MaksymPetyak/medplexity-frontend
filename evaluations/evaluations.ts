@@ -48,6 +48,10 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
       train: {
         'gpt-4':
           'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_gpt4_evaluation.json',
+        'llama-2-70b-chat-hf':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_llama-2-70b-chat-hf_evaluation.json',
+        'mistral-7b-instruct':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_mistral-7b-instruct.json',
       },
     },
   },

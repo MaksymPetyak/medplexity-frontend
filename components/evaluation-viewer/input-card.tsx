@@ -3,7 +3,7 @@ import { Separator } from '@/components/ui/separator';
 import { prettyPrint } from '@/lib/utils';
 
 interface InputCardProps {
-  inputs: Record<string, any>;
+  inputs: Record<string, any> | string;
   inputsMetadata: Record<string, any> | null;
   expectedOutput: string | null;
 }
@@ -16,11 +16,17 @@ export function InputCard({
   return (
     <CollapsableCard title={'Inputs'} isDefaultOpen>
       <div className={'flex flex-col gap-2'}>
-        {Object.entries(inputs).map(([key, value], index) => (
-          <div key={index}>
-            <strong>{key}:</strong> {prettyPrint(value)}
+        {typeof inputs === 'string' && (
+          <div>
+            <strong>Input:</strong> {inputs}
           </div>
-        ))}
+        )}
+        {typeof inputs !== 'string' &&
+          Object.entries(inputs).map(([key, value], index) => (
+            <div key={index}>
+              <strong>{key}:</strong> {prettyPrint(value)}
+            </div>
+          ))}
         {expectedOutput !== null && (
           <div>
             <Separator />

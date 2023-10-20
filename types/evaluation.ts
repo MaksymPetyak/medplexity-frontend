@@ -1,6 +1,6 @@
 // TODO: need to really enforce more type consistency
 export interface EvaluationResult {
-  input: Record<string, any>;
+  input: Record<string, any> | string;
   inputMetadata: Record<string, any> | null;
   expectedOutput: string;
   output: Record<string, any> | string;

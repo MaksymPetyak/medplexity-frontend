@@ -56,7 +56,6 @@ export function EvaluationSelector() {
     setEvaluationURL(evaluationURL);
   }, [selections.model, selectedSplitData, setEvaluationURL]);
 
-  // Step 3: Refactor into Helper Functions
   const updateDataset = (newDataset: string) => {
     setSelections({ dataset: newDataset, split: 'train', model: '' });
   };
