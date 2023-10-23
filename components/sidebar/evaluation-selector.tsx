@@ -26,7 +26,6 @@ export function EvaluationSelector() {
     model: '',
   });
 
-  const availableDatasets = Object.keys(evals);
   const selectedDataset = evals[selections.dataset];
   const availableSplits = Object.keys(selectedDataset.splits);
   // @ts-ignore

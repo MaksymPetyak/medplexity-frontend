@@ -67,5 +67,5 @@ export function EvaluationViewer() {
     return <p>No evaluation selected.</p>;
   }
 
-  return <Evaluation evaluationSummary={normalisedData} />;
+  return <Evaluation evaluationSummary={normalisedData} key={evaluationURL} />;
 }
