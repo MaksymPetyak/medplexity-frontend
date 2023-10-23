@@ -8,39 +8,48 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Dataset } from '@/evaluations/evaluations';
 
 interface DatasetSelectorProps {
   value: string;
-  options: string[];
+  datasets: { [key: string]: Dataset };
   onValueChange: (value: string) => void;
 }
 
 export function DatasetSelector({
   value,
-  options,
+  datasets,
   onValueChange,
 }: DatasetSelectorProps) {
+  const entries = Object.entries(datasets);
+
   return (
     <div>
       <p className={'font-normal text-sm'}>Datasets</p>
       <Select
         value={value}
         onValueChange={onValueChange}
-        disabled={options.length <= 1}
+        disabled={entries.length <= 1}
       >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select data set" />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            {options.map((option) => {
+            {entries.map(([key, dataset]) => {
               return (
                 <SelectItem
-                  key={option}
-                  value={option}
-                  onClick={() => onValueChange(option)}
+                  key={key}
+                  value={key}
+                  onClick={() => onValueChange(key)}
                 >
-                  {option}
+                  <div
+                    className={'flex w-full items-center justify-between gap-4'}
+                  >
+                    {dataset.name}
+                    <Badge variant={'secondary'}>{dataset.type}</Badge>
+                  </div>
                 </SelectItem>
               );
             })}

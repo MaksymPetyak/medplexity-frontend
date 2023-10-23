@@ -75,7 +75,7 @@ export function EvaluationSelector() {
     <div className={'flex flex-col gap-2 mt-2 w-full'}>
       <DatasetSelector
         value={selections.dataset}
-        options={Object.keys(evals)}
+        datasets={evals}
         onValueChange={updateDataset}
       />
       <DataSplitSelector

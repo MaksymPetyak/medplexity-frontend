@@ -7,14 +7,18 @@ export type SplitType = 'train' | 'test' | 'validation';
 export interface Dataset {
   name: string;
   description: string;
+  type: DatasetType;
   splits: {
     [key in SplitType]?: Evaluation;
   };
 }
 
+export type DatasetType = 'multiple-choice' | 'open-ended';
+
 export const DATASETS: { [datasetName: string]: Dataset } = {
   medmcqa: {
     name: 'MedMCQA',
+    type: 'multiple-choice',
     description:
       'Multiple-choice questions designed to address real-world medical entrance exam questions like AIIMS & NEET PG. This dataset encompasses over 194k high-quality MCQs spanning 2.4k healthcare topics and 21 medical subjects. Questions are accompanied by an explanation of the correct answer.',
     splits: {
@@ -26,6 +30,7 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
   },
   medqa: {
     name: 'MedQA',
+    type: 'multiple-choice',
     description:
       'Multiple-choice questions based on the United States Medical License Exams (USMLE). It covers 3 languages, but here we only look at the English subset.' +
       'Original paper: What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams\n' +
@@ -40,6 +45,7 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
   },
   healthsearchqa: {
     name: 'HealthSearchQA',
+    type: 'open-ended',
     description:
       'Dataset of consumer health questions released by Google for the Med-PaLM paper. This HealthSearchQA dataset consists of 3,173 commonly searched consumer health questions. These questions were curated using seed medical conditions and their associated symptoms, reflecting real-world consumer concerns in the healthcare domain.\n' +
       'Paper: Large Language Models Encode Clinical Knowledge\n' +
