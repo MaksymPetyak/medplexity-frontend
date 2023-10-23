@@ -17,7 +17,21 @@ export function SidebarContent() {
           More datasets and models coming soon!
         </p>
       </div>
-      <div className={'flex justify-center'}>
+      <div className={'flex flex-col gap-8 justify-center'}>
+        <div
+          className={
+            'bg-yellow-50 text-xs text-gray-700 p-2 md:p-4 border border-yellow-300'
+          }
+        >
+          <p>
+            Note, we use just a small collection (~50) of examples from bigger
+            datasets. LLM predictions aren't deterministic, so you may see
+            different results each time you run the model. These are meant just
+            to help develop an intuition about how models answer, not to make
+            any conclusions on overall performance.
+          </p>
+        </div>
+
         <Link
           target="_blank"
           href="https://github.com/MaksymPetyak/medplexity"
