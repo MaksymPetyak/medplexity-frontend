@@ -65,7 +65,11 @@ export function DatapointSelector({
     currentIndex === data.length - 1 || currentIndex === null;
 
   return (
-    <div className={'flex gap-4 items-center max-w-2xl'}>
+    <div
+      className={
+        'flex flex-col-reverse md:flex-row gap-4 items-center max-w-2xl'
+      }
+    >
       <div className={'flex gap-1'}>
         <ArrowLeft
           className={cn(
