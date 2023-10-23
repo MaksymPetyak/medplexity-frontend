@@ -48,7 +48,9 @@ export function DatasetSelector({
                     className={'flex w-full items-center justify-between gap-4'}
                   >
                     {dataset.name}
-                    <Badge variant={'secondary'}>{dataset.type}</Badge>
+                    <Badge className={'hidden md:block'} variant={'secondary'}>
+                      {dataset.type}
+                    </Badge>
                   </div>
                 </SelectItem>
               );

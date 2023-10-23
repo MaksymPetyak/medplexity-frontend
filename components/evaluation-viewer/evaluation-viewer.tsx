@@ -28,7 +28,7 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
   const { prompt, ...outputMetadata } = selectedDatapoint.outputMetadata;
 
   return (
-    <div className={'flex flex-col gap-2'}>
+    <div className={'flex flex-col gap-2 text-sm md:text-base'}>
       <DatapointSelector
         data={evaluationSummary.evaluationResults}
         onValueChange={setSelectedDatapoint}

@@ -1,13 +1,12 @@
 import { EvaluationViewer } from '@/components/evaluation-viewer/evaluation-viewer';
-import { Sidebar } from '@/components/sidebar/sidebar';
+import SidebarLayout from '@/components/sidebar/sidebar-layout';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen">
-      <Sidebar />
-      <div className="flex-grow w-full p-8">
+    <SidebarLayout>
+      <div className="flex-grow w-full p-2 sm:p-4 md:p-8 ">
         <EvaluationViewer />
       </div>
-    </main>
+    </SidebarLayout>
   );
 }
