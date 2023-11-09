@@ -652,5 +652,6 @@
     }
   ],
   "failed_evaluations": [],
+  "prompt_template": "You are a helpful medical knowledge assistant. Please summarise a given conversation into a short clinical note.\nInput: {conversation}\nSummary: ",
   "date": "09-11-2023"
 }
