@@ -17,6 +17,24 @@ interface ResultsSelectorProps {
   onValueChange: (value: EvaluationResult) => void;
 }
 
+function DisplayValue({
+  input,
+  index,
+}: {
+  input: string | Record<string, any> | any;
+  index: number;
+}) {
+  if (typeof input === 'string') {
+    return input;
+  }
+
+  if (input.question !== undefined) {
+    return input.question;
+  }
+
+  return index;
+}
+
 function CorrectnessIcon({ isCorrect }: { isCorrect: boolean | null }) {
   if (isCorrect === null) {
     return null;
@@ -115,9 +133,7 @@ export function DatapointSelector({
                       'w-full overflow-hidden whitespace-nowrap text-overflow-ellipsis'
                     }
                   >
-                    {typeof item.input === 'string'
-                      ? item.input
-                      : item.input.question}
+                    <DisplayValue input={item.input} index={index} />
                   </p>
                 </div>
               </SelectItem>
