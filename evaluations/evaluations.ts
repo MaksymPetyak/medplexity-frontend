@@ -69,9 +69,11 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
       'Paper: MTS-Dialog: A New Dataset for Medical Training Summarization in Doctor-Patient Conversations\n' +
       '2023 * Asma Ben Abacha, Wen-wai Yim, Yadan Fan, Thomas Lin * https://aclanthology.org/2023.eacl-main.1681',
     splits: {
-      train: {
+      test: {
         'gpt-4':
           'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/mtsdialog_test(50)-gpt-4.json',
+        'mistral-7b-instruct':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/mtsdialog_test(50)_mistral-7b-instruct.json',
       },
     },
   },
