@@ -25,7 +25,7 @@ export function SidebarContent() {
         >
           <p>
             Note, we use just a small collection (~50) of examples from bigger
-            datasets. LLM predictions aren't deterministic, so you may see
+            datasets. LLM predictions aren&apos;t deterministic, so you may see
             different results each time you run the model. These are meant just
             to help develop an intuition about how models answer, not to make
             any conclusions on the overall performance.
