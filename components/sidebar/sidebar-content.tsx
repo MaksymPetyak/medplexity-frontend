@@ -28,7 +28,7 @@ export function SidebarContent() {
             datasets. LLM predictions aren't deterministic, so you may see
             different results each time you run the model. These are meant just
             to help develop an intuition about how models answer, not to make
-            any conclusions on overall performance.
+            any conclusions on the overall performance.
           </p>
         </div>
 

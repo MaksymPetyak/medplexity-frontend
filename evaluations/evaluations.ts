@@ -13,7 +13,7 @@ export interface Dataset {
   };
 }
 
-export type DatasetType = 'multiple-choice' | 'open-ended';
+export type DatasetType = 'multiple-choice' | 'open-ended' | 'summarisation';
 
 export const DATASETS: { [datasetName: string]: Dataset } = {
   medmcqa: {
@@ -58,6 +58,20 @@ export const DATASETS: { [datasetName: string]: Dataset } = {
           'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_llama-2-70b-chat-hf_evaluation.json',
         'mistral-7b-instruct':
           'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/healthsearchqa_train(50)_mistral-7b-instruct.json',
+      },
+    },
+  },
+  mtsdialog: {
+    name: 'MTS-Dialog',
+    type: 'summarisation',
+    description:
+      'MTS-Dialog (Medical Training Summarization Dialog) is a comprehensive dataset featuring 1.7k doctor-patient conversations, along with their corresponding summaries, including section headers and contents.\n' +
+      'Paper: MTS-Dialog: A New Dataset for Medical Training Summarization in Doctor-Patient Conversations\n' +
+      '2023 * Asma Ben Abacha, Wen-wai Yim, Yadan Fan, Thomas Lin * https://aclanthology.org/2023.eacl-main.1681',
+    splits: {
+      train: {
+        'gpt-4':
+          'https://raw.githubusercontent.com/MaksymPetyak/medplexity-frontend/main/evaluations/mtsdialog_test(50)-gpt-4.json',
       },
     },
   },
