@@ -7,16 +7,22 @@ interface PromptCardProps {
 }
 
 export function PromptCard({ prompt, promptTemplate }: PromptCardProps) {
+  if (!prompt && !promptTemplate) {
+    return null;
+  }
+
+  const defaultValue = prompt ? 'prompt' : 'template';
+
   return (
     <CollapsableCard title={'Prompt'}>
-      <Tabs defaultValue="prompt">
+      <Tabs defaultValue={defaultValue}>
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="prompt">Final prompt</TabsTrigger>
+          {prompt && <TabsTrigger value="prompt">Final prompt</TabsTrigger>}
           {promptTemplate && (
             <TabsTrigger value="template">Template</TabsTrigger>
           )}
         </TabsList>
-        <TabsContent value="prompt">{prompt}</TabsContent>
+        {prompt && <TabsContent value="prompt">{prompt}</TabsContent>}
         {promptTemplate && (
           <TabsContent value="template">{promptTemplate}</TabsContent>
         )}

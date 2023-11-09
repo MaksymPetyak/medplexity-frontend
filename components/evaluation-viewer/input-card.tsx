@@ -15,7 +15,7 @@ export function InputCard({
 }: InputCardProps) {
   return (
     <CollapsableCard title={'Inputs'} isDefaultOpen>
-      <div className={'flex flex-col gap-2'}>
+      <div className={'flex flex-col gap-2 whitespace-pre-wrap'}>
         {typeof inputs === 'string' && (
           <div>
             <strong>Input:</strong> {inputs}
@@ -24,7 +24,8 @@ export function InputCard({
         {typeof inputs !== 'string' &&
           Object.entries(inputs).map(([key, value], index) => (
             <div key={index}>
-              <strong>{key}:</strong> {prettyPrint(value)}
+              <strong>{key}: </strong>
+              {prettyPrint(value)}
             </div>
           ))}
         {expectedOutput !== null && (

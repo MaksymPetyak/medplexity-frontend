@@ -23,9 +23,12 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
     return <p>No datapoints in the evaluation.</p>;
   }
 
-  // Prompt key is a special key that we display separately
-  // @ts-ignore
-  const { prompt, ...outputMetadata } = selectedDatapoint.outputMetadata;
+  const outputMetadata = selectedDatapoint.outputMetadata;
+  let prompt = null;
+  if (outputMetadata !== null) {
+    prompt = outputMetadata.prompt;
+    delete outputMetadata['prompt'];
+  }
 
   return (
     <div className={'flex flex-col gap-2 text-sm md:text-base'}>

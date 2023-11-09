@@ -7,6 +7,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function prettyPrint(value: any): string {
+  if (typeof value === 'string') {
+    return value;
+  }
+
   return JSON.stringify(value, null, 2);
 }
 
