@@ -56,19 +56,24 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
 }
 
 export function EvaluationViewer() {
-  const { evaluationURL } = useEvaluationStore();
+  const { selectedEvaluationURL } = useEvaluationStore();
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
-  const { data, error } = useSWR(evaluationURL, fetcher);
+  const { data, error } = useSWR(selectedEvaluationURL, fetcher);
 
   if (error) return <div className={'text-red-500'}>Error loading data</div>;
   if (!data) return <div>Loading...</div>;
 
   const normalisedData = toCamelCase(data);
 
-  if (!evaluationURL) {
+  if (!selectedEvaluationURL) {
     return <p>No evaluation selected.</p>;
   }
 
-  return <Evaluation evaluationSummary={normalisedData} key={evaluationURL} />;
+  return (
+    <Evaluation
+      evaluationSummary={normalisedData}
+      key={selectedEvaluationURL}
+    />
+  );
 }

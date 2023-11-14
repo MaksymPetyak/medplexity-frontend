@@ -1,13 +1,15 @@
 import create from 'zustand';
+import { NestedBenchmark } from '@/types/benchmarks';
 
 interface EvaluationState {
-  evaluationURL: string | null;
-  setEvaluationURL: (path: string | null) => void;
+  selectedEvaluationURL: string | null;
+  setSelectedEvaluationURL: (path: string | null) => void;
 }
 
 const useEvaluationStore = create<EvaluationState>((set) => ({
-  evaluationURL: null,
-  setEvaluationURL: (path: string | null) => set({ evaluationURL: path }),
+  selectedEvaluationURL: null,
+  setSelectedEvaluationURL: (path: string | null) =>
+    set({ selectedEvaluationURL: path }),
 }));
 
 export default useEvaluationStore;

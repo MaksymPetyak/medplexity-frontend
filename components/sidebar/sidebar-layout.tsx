@@ -4,10 +4,13 @@ import { useState } from 'react';
 import { SidebarContent } from '@/components/sidebar/sidebar-content';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+import { NestedBenchmark } from '@/types/benchmarks';
 
 export default function SidebarLayout({
+  evaluations,
   children,
 }: {
+  evaluations: NestedBenchmark[];
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,14 +21,14 @@ export default function SidebarLayout({
         <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
           <SheetContent side={'left'} className={'p-0'}>
             <div className="flex grow flex-col overflow-y-auto bg-gray-100 border-r border border-gray-300">
-              <SidebarContent />
+              <SidebarContent evaluations={evaluations} />
             </div>
           </SheetContent>
         </Sheet>
 
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           <div className="flex grow flex-col overflow-y-auto bg-gray-100 border-r border border-gray-300">
-            <SidebarContent />
+            <SidebarContent evaluations={evaluations} />
           </div>
         </div>
 

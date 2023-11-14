@@ -3,8 +3,13 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { IconGitHub } from '@/components/ui/icons';
+import { NestedBenchmark } from '@/types/benchmarks';
 
-export function SidebarContent() {
+export function SidebarContent({
+  evaluations,
+}: {
+  evaluations: NestedBenchmark[];
+}) {
   return (
     <div className="flex flex-col justify-between p-4 overflow-hidden min-h-screen">
       <div>
@@ -12,7 +17,7 @@ export function SidebarContent() {
         <p className={'text-xs font-normal'}>
           Explore LLM performance on medical benchmarks.
         </p>
-        <EvaluationSelector />
+        <EvaluationSelector evaluations={evaluations} />
         <p className={'mt-4 text-sm text-gray-500'}>
           More datasets and models coming soon!
         </p>

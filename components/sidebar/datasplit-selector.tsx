@@ -8,12 +8,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { SplitType } from '@/evaluations/evaluations';
 
 interface DataSplitSelectorProps {
-  value: SplitType;
-  options: SplitType[];
-  onValueChange: (value: SplitType) => void;
+  value: string;
+  options: string[];
+  onValueChange: (value: string) => void;
 }
 
 export function DataSplitSelector({

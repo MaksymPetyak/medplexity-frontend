@@ -2,69 +2,74 @@
 
 import { DatasetDescription } from '@/components/sidebar/dataset-description';
 import { useEffect, useState } from 'react';
-import { DATASETS, SplitType } from '@/evaluations/evaluations';
-import { DatasetSelector } from '@/components/sidebar/dataset-selector';
+import { BenchmarkSelector } from '@/components/sidebar/benchmark-selector';
 import { DataSplitSelector } from '@/components/sidebar/datasplit-selector';
 import { Separator } from '@/components/ui/separator';
 import { ModelSelector } from '@/components/sidebar/model-selector';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
+import { NestedBenchmark } from '@/types/benchmarks';
 
 interface SelectionState {
   dataset: string;
-  split: SplitType;
+  split: string;
   model: string;
 }
 
-export function EvaluationSelector() {
-  const { setEvaluationURL } = useEvaluationStore();
+export function EvaluationSelector({
+  evaluations,
+}: {
+  evaluations: NestedBenchmark[];
+}) {
+  const { setSelectedEvaluationURL } = useEvaluationStore();
 
-  const evals = DATASETS;
-
-  const [selections, setSelections] = useState<SelectionState>({
-    dataset: Object.keys(evals)[0],
-    split: 'train',
+  const [selections, setSelections] = useState({
+    benchmarkId: evaluations[0]?.benchmark.id,
+    splitType: 'train',
     model: '',
   });
 
-  const selectedDataset = evals[selections.dataset];
-  const availableSplits = Object.keys(selectedDataset.splits);
-  // @ts-ignore
-  const selectedSplitData = selectedDataset.splits[selections.split];
-  const availableModels = Object.keys(selectedSplitData || {});
+  const selectedBenchmark = evaluations.find(
+    (evaluation) => evaluation.benchmark.id === selections.benchmarkId,
+  );
+  const availableSplits = selectedBenchmark?.splits || [];
+  const selectedSplit = availableSplits.find(
+    (split) => split.split_type === selections.splitType,
+  );
+  const availableModels =
+    selectedSplit?.evaluations.map((evaluation) => evaluation.model) || [];
 
   useEffect(() => {
-    // Reset splits and models when dataset changes
+    // Reset splits and models when benchmark changes
     setSelections((prev) => ({
       ...prev,
-      split: availableSplits[0] as SplitType,
-      model: availableModels[0],
+      splitType: availableSplits[0]?.split_type || 'train',
+      model: availableModels[0] || '',
     }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selections.dataset]);
+  }, [selections.benchmarkId]);
 
   useEffect(() => {
     // Reset models when split changes
-    setSelections((prev) => ({ ...prev, model: availableModels[0] }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selections.split]);
+    setSelections((prev) => ({ ...prev, model: availableModels[0] || '' }));
+  }, [selections.splitType]);
 
   useEffect(() => {
-    const evaluationURL = selectedSplitData
-      ? selectedSplitData[selections.model]
-      : null;
-    setEvaluationURL(evaluationURL);
-  }, [selections.model, selectedSplitData, setEvaluationURL]);
+    const evaluationURL =
+      selectedSplit?.evaluations.find(
+        (evaluation) => evaluation.model === selections.model,
+      )?.evaluation_url || null;
+    setSelectedEvaluationURL(evaluationURL);
+  }, [selections.model, selectedSplit, setSelectedEvaluationURL]);
 
-  const updateDataset = (newDataset: string) => {
-    setSelections({ dataset: newDataset, split: 'train', model: '' });
+  const updateBenchmark = (newBenchmarkId: string) => {
+    setSelections({
+      benchmarkId: newBenchmarkId,
+      splitType: 'train',
+      model: '',
+    });
   };
 
-  const updateSplit = (newSplit: string) => {
-    setSelections((prev) => ({
-      ...prev,
-      split: newSplit as SplitType,
-      model: '',
-    }));
+  const updateSplit = (newSplitType: string) => {
+    setSelections((prev) => ({ ...prev, splitType: newSplitType, model: '' }));
   };
 
   const updateModel = (newModel: string) => {
@@ -73,18 +78,19 @@ export function EvaluationSelector() {
 
   return (
     <div className={'flex flex-col gap-2 mt-2 w-full'}>
-      <DatasetSelector
-        value={selections.dataset}
-        datasets={evals}
-        onValueChange={updateDataset}
+      <BenchmarkSelector
+        value={selections.benchmarkId}
+        benchmarks={evaluations.map((evaluation) => evaluation.benchmark)}
+        onValueChange={updateBenchmark}
       />
       <DataSplitSelector
-        value={selections.split}
-        // @ts-ignore
-        options={availableSplits}
+        value={selections.splitType}
+        options={availableSplits.map((split) => split.split_type)}
         onValueChange={updateSplit}
       />
-      <DatasetDescription description={selectedDataset.description} />
+      <DatasetDescription
+        description={selectedBenchmark?.benchmark.description || ''}
+      />
       <Separator className={'my-2 bg-gray-300'} />
       <ModelSelector
         value={selections.model}

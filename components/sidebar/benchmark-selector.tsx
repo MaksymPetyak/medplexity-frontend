@@ -9,47 +9,45 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { Dataset } from '@/evaluations/evaluations';
+import { Benchmark } from '@/types/benchmarks';
 
-interface DatasetSelectorProps {
+interface BenchmarkSelectorProps {
   value: string;
-  datasets: { [key: string]: Dataset };
+  benchmarks: Benchmark[];
   onValueChange: (value: string) => void;
 }
 
-export function DatasetSelector({
+export function BenchmarkSelector({
   value,
-  datasets,
+  benchmarks,
   onValueChange,
-}: DatasetSelectorProps) {
-  const entries = Object.entries(datasets);
-
+}: BenchmarkSelectorProps) {
   return (
     <div>
       <p className={'font-normal text-sm'}>Datasets</p>
       <Select
         value={value}
         onValueChange={onValueChange}
-        disabled={entries.length <= 1}
+        disabled={benchmarks.length <= 1}
       >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select data set" />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            {entries.map(([key, dataset]) => {
+            {benchmarks.map((benchmark) => {
               return (
                 <SelectItem
-                  key={key}
-                  value={key}
-                  onClick={() => onValueChange(key)}
+                  key={benchmark.id}
+                  value={benchmark.id}
+                  onClick={() => onValueChange(benchmark.id)}
                 >
                   <div
                     className={'flex w-full items-center justify-between gap-4'}
                   >
-                    {dataset.name}
+                    {benchmark.name}
                     <Badge className={'hidden md:block'} variant={'secondary'}>
-                      {dataset.type}
+                      {benchmark.type}
                     </Badge>
                   </div>
                 </SelectItem>
