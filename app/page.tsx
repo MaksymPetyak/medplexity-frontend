@@ -3,6 +3,8 @@ import SidebarLayout from '@/components/sidebar/sidebar-layout';
 import { nestEvaluations } from '@/lib/nestEvaluations';
 import { getEvaluations } from '@/lib/getEvaluations';
 
+export const revalidate = 0;
+
 export default async function Home() {
   const data = await getEvaluations();
 
