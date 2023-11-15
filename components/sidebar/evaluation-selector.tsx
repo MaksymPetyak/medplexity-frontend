@@ -10,8 +10,8 @@ import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import { NestedBenchmark } from '@/types/benchmarks';
 
 interface SelectionState {
-  dataset: string;
-  split: string;
+  benchmarkId: string;
+  splitType: string;
   model: string;
 }
 
@@ -22,7 +22,7 @@ export function EvaluationSelector({
 }) {
   const { setSelectedEvaluationURL } = useEvaluationStore();
 
-  const [selections, setSelections] = useState({
+  const [selections, setSelections] = useState<SelectionState>({
     benchmarkId: evaluations[0]?.benchmark.id,
     splitType: 'train',
     model: '',
