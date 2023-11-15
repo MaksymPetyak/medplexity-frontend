@@ -1,35 +1,56 @@
-import React from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-export const useLocalStorage = (name: string, defaultValue: any) => {
-  const [value, setValue] = React.useState(defaultValue);
-  const nameRef = React.useRef(name);
+// From - https://medium.com/@lean1190/uselocalstorage-hook-for-next-js-typed-and-ssr-friendly-4ddd178676df
 
-  React.useEffect(() => {
-    try {
-      const storedValue = localStorage.getItem(name);
-      if (storedValue !== null) setValue(storedValue);
-      else localStorage.setItem(name, defaultValue);
-    } catch {
-      setValue(defaultValue);
-    }
-  }, []);
+export default function useLocalStorage<T>(
+  key: string,
+  initialValue: T,
+): [T, Dispatch<SetStateAction<T>>] {
+  const [storedValue, setStoredValue] = useState(initialValue);
+  // We will use this flag to trigger the reading from localStorage
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
 
-  React.useEffect(() => {
-    try {
-      localStorage.setItem(nameRef.current, value);
-    } catch {}
-  }, [value]);
-
-  React.useEffect(() => {
-    const lastName = nameRef.current;
-    if (name !== lastName) {
+  // Use an effect hook in order to prevent SSR inconsistencies and errors.
+  // This will update the state with the value from the local storage after
+  // the first initial value is applied.
+  useEffect(() => {
+    const fromLocal = () => {
+      if (typeof window === 'undefined') {
+        return initialValue;
+      }
       try {
-        localStorage.setItem(name, value);
-        nameRef.current = name;
-        localStorage.removeItem(lastName);
-      } catch {}
-    }
-  }, [name]);
+        const item = window.localStorage.getItem(key);
+        return item ? (JSON.parse(item) as T) : initialValue;
+      } catch (error) {
+        console.error(error);
+        return initialValue;
+      }
+    };
 
-  return [value, setValue];
-};
+    // Set the value from localStorage
+    setStoredValue(fromLocal);
+    // First load is done
+    setFirstLoadDone(true);
+  }, [initialValue, key]);
+
+  // Instead of replacing the setState function, react to changes.
+  // Whenever the state value changes, save it in the local storage.
+  useEffect(() => {
+    // If it's the first load, don't store the value.
+    // Otherwise, the initial value will overwrite the local storage.
+    if (!firstLoadDone) {
+      return;
+    }
+
+    try {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(storedValue));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, [storedValue, firstLoadDone, key]);
+
+  // Return the original useState functions
+  return [storedValue, setStoredValue];
+}

@@ -8,10 +8,10 @@ import { Separator } from '@/components/ui/separator';
 import { ModelSelector } from '@/components/sidebar/model-selector';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import { NestedBenchmark } from '@/types/benchmarks';
-import { useLocalStorage } from '@/lib/hooks/useLocalStorage';
+import useLocalStorage from '@/lib/hooks/useLocalStorage';
 
 interface SelectionState {
-  benchmarkId: string;
+  benchmarkId: string | null;
   splitType: string;
   model: string;
 }
@@ -22,15 +22,12 @@ export function EvaluationSelector({
   evaluations: NestedBenchmark[];
 }) {
   const { setSelectedEvaluationURL } = useEvaluationStore();
-  const [storedBenchmarkId, setStoredBenchmarkId] = useLocalStorage(
-    'benchmarkId',
-    null,
-  );
+  const [storedBenchmarkId, setStoredBenchmarkId] = useLocalStorage<
+    string | null
+  >('benchmarkId', null);
 
   const [selections, setSelections] = useState<SelectionState>({
-    benchmarkId: storedBenchmarkId
-      ? storedBenchmarkId
-      : evaluations[0]?.benchmark.id,
+    benchmarkId: null,
     splitType: 'train',
     model: '',
   });
@@ -52,7 +49,9 @@ export function EvaluationSelector({
       splitType: availableSplits[0]?.split_type || 'train',
       model: availableModels[0] || '',
     }));
-    setStoredBenchmarkId(selections.benchmarkId);
+    if (selections.benchmarkId !== null) {
+      setStoredBenchmarkId(selections.benchmarkId);
+    }
   }, [selections.benchmarkId]);
 
   useEffect(() => {
@@ -84,10 +83,14 @@ export function EvaluationSelector({
     setSelections((prev) => ({ ...prev, model: newModel }));
   };
 
+  useEffect(() => {
+    setSelections((prev) => ({ ...prev, benchmarkId: storedBenchmarkId }));
+  }, [storedBenchmarkId]);
+
   return (
     <div className={'flex flex-col gap-2 mt-2 w-full'}>
       <BenchmarkSelector
-        value={selections.benchmarkId}
+        value={selections.benchmarkId || ''}
         benchmarks={evaluations.map((evaluation) => evaluation.benchmark)}
         onValueChange={updateBenchmark}
       />
