@@ -8,6 +8,7 @@ import { Separator } from '@/components/ui/separator';
 import { ModelSelector } from '@/components/sidebar/model-selector';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import { NestedBenchmark } from '@/types/benchmarks';
+import { useLocalStorage } from '@/lib/hooks/useLocalStorage';
 
 interface SelectionState {
   benchmarkId: string;
@@ -21,9 +22,15 @@ export function EvaluationSelector({
   evaluations: NestedBenchmark[];
 }) {
   const { setSelectedEvaluationURL } = useEvaluationStore();
+  const [storedBenchmarkId, setStoredBenchmarkId] = useLocalStorage(
+    'benchmarkId',
+    null,
+  );
 
   const [selections, setSelections] = useState<SelectionState>({
-    benchmarkId: evaluations[0]?.benchmark.id,
+    benchmarkId: storedBenchmarkId
+      ? storedBenchmarkId
+      : evaluations[0]?.benchmark.id,
     splitType: 'train',
     model: '',
   });
@@ -45,6 +52,7 @@ export function EvaluationSelector({
       splitType: availableSplits[0]?.split_type || 'train',
       model: availableModels[0] || '',
     }));
+    setStoredBenchmarkId(selections.benchmarkId);
   }, [selections.benchmarkId]);
 
   useEffect(() => {
