@@ -1,5 +1,4 @@
 import create from 'zustand';
-import { NestedBenchmark } from '@/types/benchmarks';
 
 interface EvaluationState {
   selectedEvaluationURL: string | null;
