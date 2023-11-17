@@ -2,22 +2,40 @@
 
 import { EvaluationResult, EvaluationSummary } from '@/types/evaluation';
 import { DatapointSelector } from '@/components/evaluation-viewer/datapoint-selector';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { InputCard } from '@/components/evaluation-viewer/input-card';
 import { OutputCard } from '@/components/evaluation-viewer/output-card';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import useSWR from 'swr';
 import { toCamelCase } from '@/lib/utils';
 import { PromptCard } from '@/components/evaluation-viewer/prompt-card';
+import { useQueryState, parseAsString } from 'next-usequerystate';
 
 interface EvaluationProps {
   evaluationSummary: EvaluationSummary;
 }
 
 function Evaluation({ evaluationSummary }: EvaluationProps) {
-  const [selectedDatapoint, setSelectedDatapoint] = useState<EvaluationResult>(
-    evaluationSummary.evaluationResults[0],
+  const [selectedDatapointId, setSelectedDatapointId] = useQueryState<string>(
+    'selectedDatapointId',
+    parseAsString,
   );
+
+  const [selectedDatapoint, setSelectedDatapoint] = useState<EvaluationResult>(
+    selectedDatapointId !== null
+      ? evaluationSummary.evaluationResults.find(
+          (item) => item.id === selectedDatapointId,
+        ) || evaluationSummary.evaluationResults[0]
+      : evaluationSummary.evaluationResults[0],
+  );
+
+  useEffect(() => {
+    if (selectedDatapoint.id) {
+      setSelectedDatapointId(selectedDatapoint.id);
+    } else {
+      setSelectedDatapointId(null);
+    }
+  }, [selectedDatapoint]);
 
   if (evaluationSummary.evaluationResults.length === 0) {
     return <p>No datapoints in the evaluation.</p>;
