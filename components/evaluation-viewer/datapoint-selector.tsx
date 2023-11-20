@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils';
 interface ResultsSelectorProps {
   data: EvaluationResult[];
   onValueChange: (value: EvaluationResult) => void;
+  initialIndex?: number;
 }
 
 function DisplayValue({
@@ -50,8 +51,9 @@ function CorrectnessIcon({ isCorrect }: { isCorrect: boolean | null }) {
 export function DatapointSelector({
   data,
   onValueChange,
+  initialIndex = 0,
 }: ResultsSelectorProps) {
-  const [currentIndex, setCurrentIndex] = useState<number | null>(0);
+  const [currentIndex, setCurrentIndex] = useState<number | null>(initialIndex);
 
   const onDatapointChange = (value: string) => {
     const index = parseInt(value);

@@ -18,7 +18,10 @@ interface EvaluationProps {
 function Evaluation({ evaluationSummary }: EvaluationProps) {
   const [selectedDatapointId, setSelectedDatapointId] = useQueryState<string>(
     'selectedDatapointId',
-    parseAsString,
+    parseAsString.withOptions({
+      history: 'push',
+      shallow: false,
+    }),
   );
 
   const [selectedDatapoint, setSelectedDatapoint] = useState<EvaluationResult>(
@@ -48,11 +51,16 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
     delete outputMetadata['prompt'];
   }
 
+  const initialIndex = evaluationSummary.evaluationResults.findIndex(
+    (item) => item.id === selectedDatapoint.id,
+  );
+
   return (
     <div className={'flex flex-col gap-2 text-sm md:text-base'}>
       <DatapointSelector
         data={evaluationSummary.evaluationResults}
         onValueChange={setSelectedDatapoint}
+        initialIndex={initialIndex === -1 ? undefined : initialIndex}
       />
       <div>
         <InputCard
