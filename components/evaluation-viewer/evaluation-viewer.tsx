@@ -35,11 +35,12 @@ function Evaluation({ evaluationSummary }: EvaluationProps) {
     return <p>No datapoints in the evaluation.</p>;
   }
 
-  const outputMetadata = selectedDatapoint.outputMetadata;
+  let outputMetadata = selectedDatapoint.outputMetadata;
   let prompt = null;
   if (outputMetadata !== null) {
-    prompt = outputMetadata.prompt;
-    delete outputMetadata['prompt'];
+    let { prompt: extractedPrompt, ...metadata } = outputMetadata;
+    prompt = extractedPrompt;
+    outputMetadata = metadata;
   }
 
   const initialIndex = evaluationSummary.evaluationResults.findIndex(

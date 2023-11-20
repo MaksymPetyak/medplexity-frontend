@@ -11,16 +11,16 @@ export function PromptCard({ prompt, promptTemplate }: PromptCardProps) {
     return null;
   }
 
-  const defaultValue = prompt ? 'prompt' : 'template';
+  const defaultValue = promptTemplate ? 'template' : 'prompt';
 
   return (
     <CollapsableCard title={'Prompt'}>
       <Tabs defaultValue={defaultValue}>
         <TabsList className="grid w-full grid-cols-2">
-          {prompt && <TabsTrigger value="prompt">Final prompt</TabsTrigger>}
           {promptTemplate && (
             <TabsTrigger value="template">Template</TabsTrigger>
           )}
+          {prompt && <TabsTrigger value="prompt">Final prompt</TabsTrigger>}
         </TabsList>
         {prompt && <TabsContent value="prompt">{prompt}</TabsContent>}
         {promptTemplate && (
