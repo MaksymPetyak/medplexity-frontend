@@ -9,35 +9,26 @@ import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
 import useSWR from 'swr';
 import { toCamelCase } from '@/lib/utils';
 import { PromptCard } from '@/components/evaluation-viewer/prompt-card';
-import { useQueryState, parseAsString } from 'next-usequerystate';
+import useQueryParams from '@/lib/hooks/useQueryParams';
 
 interface EvaluationProps {
   evaluationSummary: EvaluationSummary;
 }
 
 function Evaluation({ evaluationSummary }: EvaluationProps) {
-  const [selectedDatapointId, setSelectedDatapointId] = useQueryState<string>(
-    'selectedDatapointId',
-    parseAsString.withOptions({
-      history: 'push',
-      shallow: false,
-    }),
-  );
+  const { queryParams } = useQueryParams();
+  const { setSelectedDatapointId } = useEvaluationStore();
 
   const [selectedDatapoint, setSelectedDatapoint] = useState<EvaluationResult>(
-    selectedDatapointId !== null
+    queryParams.get('selectedDatapointId') !== null
       ? evaluationSummary.evaluationResults.find(
-          (item) => item.id === selectedDatapointId,
+          (item) => item.id === queryParams.get('selectedDatapointId'),
         ) || evaluationSummary.evaluationResults[0]
       : evaluationSummary.evaluationResults[0],
   );
 
   useEffect(() => {
-    if (selectedDatapoint.id) {
-      setSelectedDatapointId(selectedDatapoint.id);
-    } else {
-      setSelectedDatapointId(null);
-    }
+    setSelectedDatapointId(selectedDatapoint.id || null);
   }, [selectedDatapoint]);
 
   if (evaluationSummary.evaluationResults.length === 0) {

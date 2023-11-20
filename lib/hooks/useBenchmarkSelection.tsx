@@ -1,7 +1,8 @@
 import { NestedBenchmark } from '@/types/benchmarks';
 import useEvaluationStore from '@/lib/hooks/useEvaluationStore';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useReducer } from 'react';
+import useQueryParams from '@/lib/hooks/useQueryParams';
 
 const getNewSplit = (
   evaluations: NestedBenchmark[],
@@ -35,39 +36,97 @@ interface BenchmarkSelectionState {
   benchmarkId: string;
   splitType: string;
   model: string;
+  selectedDatapointId?: string | null;
 }
 
-export function useBenchmarkSelection(evalautions: NestedBenchmark[]) {
-  const { setSelectedEvaluationURL } = useEvaluationStore();
-  const router = useRouter();
-  const searchParams = useSearchParams()!;
+type Action =
+  | { type: 'UPDATE_BENCHMARK'; newBenchmarkId: string }
+  | { type: 'UPDATE_SPLIT'; newSplitType: string }
+  | { type: 'UPDATE_MODEL'; newModel: string };
 
-  const [selections, setSelections] = useState<BenchmarkSelectionState>(() => {
-    const benchmarkId =
-      searchParams.get('benchmarkId') || evalautions[0].benchmark.id;
-    const splitType = getNewSplit(
+function reducer(
+  state: BenchmarkSelectionState,
+  action: Action,
+  evaluations: NestedBenchmark[],
+) {
+  switch (action.type) {
+    case 'UPDATE_BENCHMARK': {
+      const newSplitType = getNewSplit(
+        evaluations,
+        action.newBenchmarkId,
+        state.splitType,
+      );
+      const newModel = getNewModel(
+        evaluations,
+        action.newBenchmarkId,
+        newSplitType,
+        state.model,
+      );
+      return {
+        ...state,
+        benchmarkId: action.newBenchmarkId,
+        splitType: newSplitType,
+        model: newModel,
+      };
+    }
+    case 'UPDATE_SPLIT': {
+      const newModel = getNewModel(
+        evaluations,
+        state.benchmarkId,
+        action.newSplitType,
+        state.model,
+      );
+      return { ...state, splitType: action.newSplitType, model: newModel };
+    }
+    case 'UPDATE_MODEL':
+      return { ...state, model: action.newModel };
+    default:
+      return state;
+  }
+}
+
+function getDefaults(
+  searchParams: URLSearchParams,
+  evalautions: NestedBenchmark[],
+): BenchmarkSelectionState {
+  const benchmarkId =
+    searchParams.get('benchmarkId') || evalautions[0].benchmark.id;
+  const splitType = getNewSplit(
+    evalautions,
+    benchmarkId,
+    searchParams.get('splitType') || '',
+  );
+
+  return {
+    benchmarkId: benchmarkId,
+    splitType: splitType,
+    model: getNewModel(
       evalautions,
       benchmarkId,
-      searchParams.get('splitType') || '',
-    );
+      splitType,
+      searchParams.get('model') || '',
+    ),
+  };
+}
 
-    return {
-      benchmarkId: benchmarkId,
-      splitType: splitType,
-      model: getNewModel(
-        evalautions,
-        benchmarkId,
-        splitType,
-        searchParams.get('model') || '',
-      ),
-    };
-  });
+export function useBenchmarkSelection(evaluations: NestedBenchmark[]) {
+  const { selectedDatapointId, setSelectedEvaluationURL } =
+    useEvaluationStore();
+  const searchParams = useSearchParams()!;
 
-  const availableBenchmarks = evalautions.map(
+  const { setQueryParams } = useQueryParams<BenchmarkSelectionState>();
+
+  const [selections, dispatch] = useReducer(
+    (state: BenchmarkSelectionState, action: Action) =>
+      reducer(state, action, evaluations),
+    getDefaults(searchParams, evaluations),
+  );
+
+  const availableBenchmarks = evaluations.map(
     (evaluation) => evaluation.benchmark,
   );
   const availableSplits =
-    evalautions.find(
+    evaluations.find(
       (evaluation) => evaluation.benchmark.id == selections.benchmarkId,
     )?.splits || [];
 
@@ -78,40 +137,15 @@ export function useBenchmarkSelection(evalautions: NestedBenchmark[]) {
     selectedSplit?.evaluations.map((evaluation) => evaluation.model) || [];
 
   const updateBenchmark = (newBenchmarkId: string) => {
-    const newSplitType = getNewSplit(
-      evalautions,
-      newBenchmarkId,
-      selections.splitType,
-    );
-    const newModel = getNewModel(
-      evalautions,
-      newBenchmarkId,
-      newSplitType,
-      selections.model,
-    );
-
-    setSelections({
-      benchmarkId: newBenchmarkId,
-      splitType: newSplitType,
-      model: newModel,
-    });
+    dispatch({ type: 'UPDATE_BENCHMARK', newBenchmarkId });
   };
 
   const updateSplit = (newSplitType: string) => {
-    setSelections((prev) => {
-      const newModel = getNewModel(
-        evalautions,
-        prev.benchmarkId,
-        newSplitType,
-        prev.model,
-      );
-
-      return { ...prev, splitType: newSplitType, model: newModel };
-    });
+    dispatch({ type: 'UPDATE_SPLIT', newSplitType });
   };
 
   const updateModel = (newModel: string) => {
-    setSelections((prev) => ({ ...prev, model: newModel }));
+    dispatch({ type: 'UPDATE_MODEL', newModel });
   };
 
   useEffect(() => {
@@ -124,18 +158,8 @@ export function useBenchmarkSelection(evalautions: NestedBenchmark[]) {
 
   // Updates the query parameters when the selections change
   useEffect(() => {
-    const newParams = new URLSearchParams(searchParams);
-
-    Object.entries(selections).forEach(([key, value]) => {
-      if (value !== null && value !== undefined) {
-        newParams.set(key, value);
-      } else {
-        newParams.delete(key);
-      }
-    });
-
-    router.push(`?${newParams}`);
-  }, [selections]);
+    setQueryParams({ ...selections, selectedDatapointId: selectedDatapointId });
+  }, [selections, selectedDatapointId]);
 
   return {
     selections,
