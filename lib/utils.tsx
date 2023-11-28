@@ -6,9 +6,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function prettyPrint(value: any): string {
+export function displayValue(value: any): React.ReactNode {
   if (typeof value === 'string') {
     return value;
+  }
+  if (
+    typeof value === 'object' &&
+    value.type === 'image' &&
+    value.format === 'base64'
+  ) {
+    return (
+      <img
+        style={{ maxWidth: '512px' }}
+        src={`data:image;base64,${value.content}`}
+      />
+    );
   }
 
   return JSON.stringify(value, null, 2);

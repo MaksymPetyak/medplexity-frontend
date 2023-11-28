@@ -15,7 +15,7 @@ export function SidebarContent({
       <div>
         <p className={'text-lg font-semibold'}>Medplexity explorer</p>
         <p className={'text-xs font-normal'}>
-          Explore LLM performance on medical benchmarks.
+          Explore performance of LLMs on medical benchmarks.
         </p>
         <EvaluationSelector evaluations={evaluations} />
         <p className={'mt-4 text-sm text-gray-500'}>

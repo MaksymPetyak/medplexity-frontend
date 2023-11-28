@@ -1,6 +1,6 @@
 import { CollapsableCard } from '@/components/collapsable-card';
 import { Separator } from '@/components/ui/separator';
-import { prettyPrint } from '@/lib/utils';
+import { displayValue } from '@/lib/utils';
 
 interface OutputCardProps {
   output: Record<string, any> | string;
@@ -18,7 +18,7 @@ export function OutputCard({ output, outputsMetadata }: OutputCardProps) {
         ) : (
           Object.entries(output).map(([key, value], index) => (
             <div key={index}>
-              <strong>{key}:</strong> {prettyPrint(value)}
+              <strong>{key}:</strong> {displayValue(value)}
             </div>
           ))
         )}
@@ -27,7 +27,7 @@ export function OutputCard({ output, outputsMetadata }: OutputCardProps) {
             <Separator />
             {Object.entries(outputsMetadata).map(([key, value], index) => (
               <div key={index}>
-                <strong>{key}:</strong> {prettyPrint(value)}
+                <strong>{key}:</strong> {displayValue(value)}
               </div>
             ))}
           </div>
