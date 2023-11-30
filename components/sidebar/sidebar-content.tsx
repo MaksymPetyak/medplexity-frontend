@@ -22,7 +22,7 @@ export function SidebarContent({
           See GitHub for more information on how to run your own evaluations.
         </p>
       </div>
-      <div className={'flex flex-col gap-8 justify-center'}>
+      <div className={'flex flex-col gap-2 justify-center'}>
         <div
           className={
             'bg-yellow-50 text-xs text-gray-700 p-2 md:p-4 border border-yellow-300'
@@ -45,6 +45,12 @@ export function SidebarContent({
         >
           <IconGitHub />
           <span className="ml-2 flex">GitHub</span>
+        </Link>
+        <Link
+          className={'flex justify-center text-xs text-blue-500'}
+          href="mailto:petyak.mi@gmail.com"
+        >
+          Contact me
         </Link>
       </div>
     </div>
