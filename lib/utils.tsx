@@ -7,6 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function displayValue(value: any): React.ReactNode {
+  if (value === null) {
+    return null;
+  }
   if (typeof value === 'string') {
     return value;
   }
