@@ -19,7 +19,7 @@ export function SidebarContent({
         </p>
         <EvaluationSelector evaluations={evaluations} />
         <p className={'mt-4 text-sm text-gray-500'}>
-          More datasets and models coming soon!
+          See GitHub for more information on how to run your own evaluations.
         </p>
       </div>
       <div className={'flex flex-col gap-8 justify-center'}>
